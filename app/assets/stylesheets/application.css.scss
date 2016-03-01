@@ -1,0 +1,61 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+h1 {
+  font-size: 3.5em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+
+/* HOME */
+
+.home-wrapper {
+  height: 100vh;
+  background-image: url("/assets/home_background.png");
+  background-size: cover;
+}
+
+.home-inner-wrapper {
+  background-color: rgba(248, 237, 237, 0.6);
+  height: 100vh;
+  padding-top: 150px;
+  .home-content {
+    font-family: 'Poiret One';
+    text-align: center;
+    width: 550px;
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 20px 0 50px 0;
+    h3 {
+      padding-top: 15px;
+    }
+    .login-link {
+      margin-top: 60px;
+      a {
+        font-size: 1.5em;
+        color: black;
+        text-decoration: none;
+        border: 3px solid black;
+        border-radius: 6px;
+        padding: 15px;
+      }
+    }
+  }
+}

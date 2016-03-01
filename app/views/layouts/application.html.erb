@@ -2,13 +2,28 @@
 <html>
 <head>
   <title>RoomTemperature</title>
+  <!-- Google Font - Poiret One -->
+  <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+  <!-- CSS Style Reset -->
+  <%= stylesheet_link_tag    'css_reset', media: 'all', 'data-turbolinks-track' => true %>
+  <!-- Custom CSS -->
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <!-- Display Flash Messages -->
+  <% flash.each do |type, msg| %>
+    <%= content_tag :span, sanitize(msg) %>
+  <% end %>
+
 
 <%= yield %>
 
+  <!-- Materialize JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js">
+  </script>
 </body>
 </html>
