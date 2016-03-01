@@ -1,0 +1,68 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/JEC/Turing/3Module/projects/slack_mood/room_temperature/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/JEC/Turing/3Module/projects/slack_mood/room_temperature/app/models/user.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/JEC/Turing/3Module/projects/slack_mood/room_temperature/app/controllers/home_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/JEC/Turing/3Module/projects/slack_mood/room_temperature/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/JEC/Turing/3Module/projects/slack_mood/room_temperature/app/controllers/sessions_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/JEC/Turing/3Module/projects/slack_mood/room_temperature/app/controllers/dashboards_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1456868848
+  }
+}
