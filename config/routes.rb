@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root "home#show"
+  get "dashboard", to: "dashboards#show"
 
   get "auth/slack", as: :login
   get "auth/:provider/callback", to: "sessions#create"
-  get "dashboard", to: "dashboards#show"
+  delete "logout", to: "sessions#destroy"
 end
