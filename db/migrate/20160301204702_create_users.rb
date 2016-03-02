@@ -2,7 +2,7 @@ class CreateUsers < ActiveRecord::Migration
   def change
     create_table :users do |t|
       t.string :u_id
-      t.string :team_name
+      t.string :team
       t.string :token
       t.string :nickname
 

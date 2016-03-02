@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20160302024924) do
 
   create_table "users", force: :cascade do |t|
     t.string   "u_id"
-    t.string   "team_name"
+    t.string   "team"
     t.string   "token"
     t.string   "nickname"
     t.datetime "created_at", null: false

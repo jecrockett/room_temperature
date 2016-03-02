@@ -5,6 +5,11 @@
         1,
         null
       ],
+      "/Users/JEC/Turing/3Module/projects/slack_mood/room_temperature/app/models/sentiment.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/JEC/Turing/3Module/projects/slack_mood/room_temperature/app/services/slack_service.rb": [
         1,
         1,
@@ -22,6 +27,8 @@
         1,
         1,
         null,
+        1,
+        1,
         null,
         null,
         null,
@@ -89,8 +96,15 @@
         null,
         null,
         null
+      ],
+      "/Users/JEC/Turing/3Module/projects/slack_mood/room_temperature/app/services/indico_service.rb": [
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
-    "timestamp": 1456877057
+    "timestamp": 1456896709
   }
 }
