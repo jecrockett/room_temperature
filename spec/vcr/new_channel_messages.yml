@@ -21,7 +21,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '9865'
+      - '9196'
       Connection:
       - keep-alive
       Access-Control-Allow-Origin:
@@ -31,7 +31,7 @@ http_interactions:
       Content-Security-Policy:
       - referrer no-referrer;
       Date:
-      - Wed, 02 Mar 2016 00:04:16 GMT
+      - Wed, 02 Mar 2016 19:13:35 GMT
       Expires:
       - Mon, 26 Jul 1997 05:00:00 GMT
       Pragma:
@@ -53,13 +53,20 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 e2bf7b3b8a58e18e62bdf715b9bdf09c.cloudfront.net (CloudFront)
+      - 1.1 83038ba72c6b8f14ce170ee7b725175e.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - 3wLn8HIuGTwWOfHRsz3BvdOP-IUlf_FBzKxpEvbJIi11qp70HSiB1Q==
+      - Yow5c4VbI23ar8WAj3AV3NC6Kl7LM3M5K5g-mg0j-zLIVef8sdYelQ==
     body:
       encoding: ASCII-8BIT
-      string: '{"ok":true,"messages":[{"type":"message","user":"U02FM471Z","text":"There''s
-        a point where a thing is too far gone for ethical compostinf","ts":"1456874444.000516","reactions":[{"name":"meeka-the-pop-star","users":["U0DCH2M9A","U02D2TTKD"],"count":2}]},{"type":"message","user":"U0DCP9P7T","text":"maybe
+      string: '{"ok":true,"messages":[{"user":"U02Q2FPBZ","type":"message","subtype":"channel_leave","text":"<@U02Q2FPBZ|orion>
+        has left the channel","ts":"1456932968.000522"},{"type":"message","user":"U02D2TTKD","text":"<!channel>
+        Still looking for 3-5 more student-led electives for this Friday. DM me if
+        you''re interested. ","ts":"1456930505.000521"},{"type":"message","user":"U0DCH2M9A","text":"^^^^
+        that\u2019s a juicy link right there, brah!","ts":"1456897387.000520"},{"type":"message","user":"U0DSNJEKW","text":"but
+        for ruby time objects","ts":"1456880496.000519"},{"type":"message","user":"U0DSNJEKW","text":"similar
+        to rubular","ts":"1456880491.000518"},{"type":"message","user":"U0DSNJEKW","text":"people
+        of turing we have the technology: <http:\/\/www.foragoodstrftime.com\/>","ts":"1456880468.000517","reactions":[{"name":"upvote","users":["U0DK1AD28","U0DCH2M9A","U0EAU6Z41"],"count":3},{"name":"bro-do-you-even-code","users":["U0DK1AD28","U0DCH2M9A"],"count":2},{"name":"ruby","users":["U09U4THDZ","U0DCH2M9A","U09U4L96J","U0E28NL2Z"],"count":4}]},{"type":"message","user":"U02FM471Z","text":"There''s
+        a point where a thing is too far gone for ethical compostinf","ts":"1456874444.000516","reactions":[{"name":"meeka-the-pop-star","users":["U0DCH2M9A","U02D2TTKD","U0DDF6JU8"],"count":3}]},{"type":"message","user":"U0DCP9P7T","text":"maybe
         the <#C0L0M6TKJ> club can try to compost it","ts":"1456874052.000515"},{"type":"message","user":"U02GA9USU","text":"<@U029PR5TG>:
         Please do not kill it with fire. That\u2019s a bad idea.","ts":"1456872597.000514"},{"type":"message","user":"U03J8R009","text":"Valar
         Morghulis","ts":"1456868853.000513"},{"type":"message","user":"U029PR5TG","text":"<@U03J8R009>:
@@ -227,32 +234,7 @@ http_interactions:
         a coffee drinker and notice our supply is low, please help me out and let
         me know so I can have more ready before we run out. Thanks! ","ts":"1456499413.000397"},{"type":"message","user":"U0E5GRGF8","text":"<@U096YTZN1>:
         coffeee???","ts":"1456499250.000396"},{"user":"U03JJ9VQ5","type":"message","subtype":"channel_leave","text":"<@U03JJ9VQ5|michaelm>
-        has left the channel","ts":"1456499038.000395"},{"type":"message","user":"U02D2TTKD","text":"Just
-        want to put this on people\u2019s radars \u2014 the ninth grade from the school
-        I co-founded in Las Vegas is coming to Denver the weekend of March 19 to visit
-        colleges (and Turing, of course :simple_smile: ). *This is during intermission
-        week*. It\u2019s about 40 ninth graders total, and I\u2019d love to get some
-        Turing students for a Q&amp;A, project demos, and a small intro to coding
-        workshop. If you\u2019re interested and available in the morning of March
-        19, join <#C02Q33Z71> and I\u2019ll post more deets there.","ts":"1456444725.000394","reactions":[{"name":"upvote","users":["U0C6CG4RL","U0DCH2M9A"],"count":2},{"name":"fun-raquel","users":["U0DCH2M9A"],"count":1},{"name":"you-just-got-warbelowed","users":["U0DCH2M9A"],"count":1}]},{"type":"message","user":"U0JL28WLR","text":"<!here|@here>
-        is anyone feeling separation anxiety from their ipod\/iphone (some apple product)?
-        it appears one is presently stationed on the shelf by the paper towels in
-        the bathroom by classroom A","ts":"1456443204.000393","reactions":[{"name":"turing-channel-please","users":["U0HA8DY4C","U0DCH2M9A"],"count":2},{"name":"nice-profile-pic","users":["U0DCH2M9A"],"count":1}]},{"type":"message","user":"U07QJH78T","text":"Tomorrow,
-        LGBTuring event at Society after wrap up (literally down the street) - all
-        the cool kids are coming :simple_smile:","ts":"1456441808.000392","reactions":[{"name":"linux","users":["U06U9LUMA","U0DCH2M9A"],"count":2}]},{"type":"message","subtype":"pinned_item","user":"U07QJH78T","item_type":"C","attachments":[{"color":"D0D0D0","fallback":"[February
-        19th, 2016 6:53 PM] at-sekhar: hey folks, meant to announce at wrap up, but
-        LGBTuring is hosting our once a module social event, this time down the street
-        at Society, the sports bar (1434 Blake St.). It''ll be next Friday, 2\/26
-        at 4:30 pm, and Turing will likely cover appetizers (but not drinks). DM me
-        with any questions and join the channel at <#C09RJUB6C>","author_subname":"at-sekhar","ts":"1455926035.000260","text":"hey
-        folks, meant to announce at wrap up, but LGBTuring is hosting our once a module
-        social event, this time down the street at Society, the sports bar (1434 Blake
-        St.). It''ll be next Friday, 2\/26 at 4:30 pm, and Turing will likely cover
-        appetizers (but not drinks). DM me with any questions and join the channel
-        at <#C09RJUB6C>","author_name":"Sekhar Paladugu","author_link":"https:\/\/turingschool.slack.com\/team\/at-sekhar","author_icon":"https:\/\/avatars.slack-edge.com\/2016-02-24\/22903087152_5078d2bf6d8f1ba0979f_48.jpg","mrkdwn_in":["text"]}],"text":"<@U07QJH78T|at-sekhar>
-        pinned a message to this channel.","ts":"1456441779.000391"},{"user":"U0P4J1WFQ","type":"message","subtype":"channel_join","text":"<@U0P4J1WFQ|codingzero>
-        has joined the channel","ts":"1456439754.000390"},{"user":"U0P437H28","type":"message","subtype":"channel_join","text":"<@U0P437H28|rbatty>
-        has joined the channel","ts":"1456436799.000389"}],"has_more":true}'
+        has left the channel","ts":"1456499038.000395"}],"has_more":true}'
     http_version: 
-  recorded_at: Wed, 02 Mar 2016 00:04:17 GMT
+  recorded_at: Wed, 02 Mar 2016 19:13:33 GMT
 recorded_with: VCR 3.0.1

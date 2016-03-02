@@ -37,8 +37,8 @@ OmniAuth.config.mock_auth[:slack] = OmniAuth::AuthHash.new({
     :token => 'xoxp-2329094327-10377755170-23775525907-1234567899'
   },
   :info => {
-    :nickname => 'jamieeeee'
-    :team => "Turing"
+    :nickname => 'jamieeeee',
+    :team => "Turing",
     :team_id => 1
   }
 })
