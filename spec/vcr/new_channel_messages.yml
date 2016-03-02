@@ -1,0 +1,258 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://slack.com/api/channels.history?channel=C03HS2LS0&token=xoxp-2329094327-10377755170-23775525907-73891740df
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '9865'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Security-Policy:
+      - referrer no-referrer;
+      Date:
+      - Wed, 02 Mar 2016 00:04:16 GMT
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Accepted-Oauth-Scopes:
+      - channels:history
+      X-Content-Type-Options:
+      - nosniff
+      X-Oauth-Scopes:
+      - identify,channels:history,im:history,mpim:history,channels:read,team:read,users:read,usergroups:read
+      X-Xss-Protection:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 e2bf7b3b8a58e18e62bdf715b9bdf09c.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - 3wLn8HIuGTwWOfHRsz3BvdOP-IUlf_FBzKxpEvbJIi11qp70HSiB1Q==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"ok":true,"messages":[{"type":"message","user":"U02FM471Z","text":"There''s
+        a point where a thing is too far gone for ethical compostinf","ts":"1456874444.000516","reactions":[{"name":"meeka-the-pop-star","users":["U0DCH2M9A","U02D2TTKD"],"count":2}]},{"type":"message","user":"U0DCP9P7T","text":"maybe
+        the <#C0L0M6TKJ> club can try to compost it","ts":"1456874052.000515"},{"type":"message","user":"U02GA9USU","text":"<@U029PR5TG>:
+        Please do not kill it with fire. That\u2019s a bad idea.","ts":"1456872597.000514"},{"type":"message","user":"U03J8R009","text":"Valar
+        Morghulis","ts":"1456868853.000513"},{"type":"message","user":"U029PR5TG","text":"<@U03J8R009>:
+        Valar Morghulis","ts":"1456867273.000512"},{"type":"message","user":"U03J8R009","text":"april
+        26th 2016","ts":"1456866483.000511"},{"type":"message","user":"U03J8R009","text":"da
+        du dadada du","ts":"1456866476.000510"},{"type":"message","user":"U03J8R009","text":"and
+        ice","ts":"1456866451.000509"},{"type":"message","user":"U029PR5TG","text":"^
+        KILL IT WITH FIRE","ts":"1456866426.000508"},{"type":"message","user":"U04UEBSJK","text":"they
+        have 2 minutes!","ts":"1456862287.000507"},{"type":"message","user":"U09U4L96J","text":"If
+        it smells like a dead body, do you think they even still want it? I would
+        just toss it","ts":"1456862145.000506"},{"type":"message","user":"U04UEBSJK","text":"The
+        owner of this bag which is the culprit of the dead body smell has until the
+        end of lunch then this is getting thrown away.  sitting on top of the cabinet
+        by the trash cans","edited":{"user":"U04UEBSJK","ts":"1456860507.000000"},"ts":"1456860492.000504","reactions":[{"name":"fire","users":["U0HRSRB0V","U09UB1KFY"],"count":2}]},{"type":"message","subtype":"file_share","text":"<@U04UEBSJK|this_just_in>
+        uploaded a file: <https:\/\/turingschool.slack.com\/files\/this_just_in\/F0PP9DX88\/wp_20160301_12_10_19_pro.jpg|WP&lowbar;20160301&lowbar;12&lowbar;10&lowbar;19&lowbar;Pro.jpg>","file":{"id":"F0PP9DX88","created":1456860478,"timestamp":1456860478,"name":"WP_20160301_12_10_19_Pro.jpg","title":"WP_20160301_12_10_19_Pro.jpg","mimetype":"image\/jpeg","filetype":"jpg","pretty_type":"JPEG","user":"U04UEBSJK","editable":false,"size":359069,"mode":"hosted","is_external":false,"external_type":"","is_public":true,"public_url_shared":false,"display_as_bot":false,"username":"","url_private":"https:\/\/files.slack.com\/files-pri\/T029P2S9M-F0PP9DX88\/wp_20160301_12_10_19_pro.jpg","url_private_download":"https:\/\/files.slack.com\/files-pri\/T029P2S9M-F0PP9DX88\/download\/wp_20160301_12_10_19_pro.jpg","thumb_64":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PP9DX88-6e98b5fbec\/wp_20160301_12_10_19_pro_64.jpg","thumb_80":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PP9DX88-6e98b5fbec\/wp_20160301_12_10_19_pro_80.jpg","thumb_360":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PP9DX88-6e98b5fbec\/wp_20160301_12_10_19_pro_360.jpg","thumb_360_w":203,"thumb_360_h":360,"thumb_480":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PP9DX88-6e98b5fbec\/wp_20160301_12_10_19_pro_480.jpg","thumb_480_w":270,"thumb_480_h":480,"thumb_160":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PP9DX88-6e98b5fbec\/wp_20160301_12_10_19_pro_160.jpg","thumb_720":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PP9DX88-6e98b5fbec\/wp_20160301_12_10_19_pro_720.jpg","thumb_720_w":405,"thumb_720_h":720,"thumb_960":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PP9DX88-6e98b5fbec\/wp_20160301_12_10_19_pro_960.jpg","thumb_960_w":540,"thumb_960_h":960,"thumb_1024":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PP9DX88-6e98b5fbec\/wp_20160301_12_10_19_pro_1024.jpg","thumb_1024_w":576,"thumb_1024_h":1024,"image_exif_rotation":1,"original_w":1632,"original_h":918,"permalink":"https:\/\/turingschool.slack.com\/files\/this_just_in\/F0PP9DX88\/wp_20160301_12_10_19_pro.jpg","permalink_public":"https:\/\/slack-files.com\/T029P2S9M-F0PP9DX88-c41d4bd1db","channels":["C03HS2LS0"],"groups":[],"ims":[],"comments_count":0},"user":"U04UEBSJK","upload":true,"display_as_bot":false,"username":"<@U04UEBSJK|this_just_in>","bot_id":null,"ts":"1456860489.000503"},{"type":"message","user":"U04T2GBH6","text":"#MakeTuringGreatAgain","ts":"1456859609.000500"},{"type":"message","user":"U04UEBSJK","text":"If
+        you have food in the main fridge\u2026\u2026..come get it and put it back
+        into the fridge.  I\u2019m leaving anything out that may be the culprit of
+        the nasty smell on the table.","ts":"1456859583.000499"},{"type":"message","user":"U04UEBSJK","text":"<@U0E9ZQ6VB>:
+        did you mean to tag me instead of the anther Justin in that last message?","ts":"1456851024.000497"},{"type":"message","user":"U04UEBSJK","text":"<@U0E9ZQ6VB>:
+        Hey, can you put me in touch with your friend?  I would love to ask some questions
+        since I\u2019m using the RTD api for my personal project right now.","ts":"1456850726.000496"},{"type":"message","user":"U0E9ZQ6VB","text":"<@U02Q2FPBZ>:
+        <@U04UEBSJK>  my buddy is a developer for RTD! I can reach out with any questions.","edited":{"user":"U0E9ZQ6VB","ts":"1456851054.000000"},"ts":"1456850160.000495","reactions":[{"name":"+1","users":["U02Q2FPBZ"],"count":1}]},{"type":"message","user":"U02Q2FPBZ","text":"Hopefully
+        they get you real time access soon.  I\u2019ll send you an email with some
+        contact information that you could possibly use to get the ball rolling.","ts":"1456850049.000494","reactions":[{"name":"+1","users":["U04UEBSJK"],"count":1}]},{"type":"message","user":"U02Q2FPBZ","text":"That\u2019s
+        sweet you\u2019re using it!","ts":"1456849940.000493"},{"type":"message","user":"U04UEBSJK","text":"other
+        than that, they just give you a bunch of txt files with all the schedules
+        and routes","ts":"1456849877.000491"},{"type":"message","user":"U04UEBSJK","text":"<@U02Q2FPBZ>:
+        I\u2019m using it on mine.  I\u2019m waiting to get approved to get into the
+        real time updates on bus schedules","edited":{"user":"U04UEBSJK","ts":"1456849909.000000"},"ts":"1456849839.000490"},{"type":"message","user":"U02Q2FPBZ","text":"Has
+        anyone looked into this?  <http:\/\/www.rtd-denver.com\/Developer.shtml>\nIt
+        might be interesting to use for personal projects.","attachments":[{"title":"RTD","title_link":"http:\/\/www.rtd-denver.com\/Developer.shtml","text":"Bus
+        and rail transit service to Denver, Boulder, and surrounding cities in Colorado.
+        Find station information, route maps, schedules, and fare options.","fallback":"RTD","from_url":"http:\/\/www.rtd-denver.com\/Developer.shtml","id":1}],"ts":"1456849732.000488","reactions":[{"name":"fire","users":["U0HRSRB0V"],"count":1}]},{"user":"U02Q2FPBZ","type":"message","subtype":"channel_join","text":"<@U02Q2FPBZ|orion>
+        has joined the channel","ts":"1456849708.000487"},{"type":"message","user":"U07QFRB19","text":"<@U0FFKBL3F>:
+        those are mine!!!","ts":"1456848128.000486"},{"type":"message","subtype":"file_share","text":"<@U0FFKBL3F|marinacor>
+        uploaded a file: <https:\/\/turingschool.slack.com\/files\/marinacor\/F0PMNF129\/someone_left_sunglasses_in_the_back_of_a.jpg|Someone
+        left sunglasses in the back of A>","file":{"id":"F0PMNF129","created":1456845074,"timestamp":1456845074,"name":"Someone
+        left sunglasses in the back of A.jpg","title":"Someone left sunglasses in
+        the back of A","mimetype":"image\/jpeg","filetype":"jpg","pretty_type":"JPEG","user":"U0FFKBL3F","editable":false,"size":534955,"mode":"hosted","is_external":false,"external_type":"","is_public":true,"public_url_shared":false,"display_as_bot":false,"username":"","url_private":"https:\/\/files.slack.com\/files-pri\/T029P2S9M-F0PMNF129\/someone_left_sunglasses_in_the_back_of_a.jpg","url_private_download":"https:\/\/files.slack.com\/files-pri\/T029P2S9M-F0PMNF129\/download\/someone_left_sunglasses_in_the_back_of_a.jpg","thumb_64":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PMNF129-dbd06e3966\/someone_left_sunglasses_in_the_back_of_a_64.jpg","thumb_80":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PMNF129-dbd06e3966\/someone_left_sunglasses_in_the_back_of_a_80.jpg","thumb_360":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PMNF129-dbd06e3966\/someone_left_sunglasses_in_the_back_of_a_360.jpg","thumb_360_w":270,"thumb_360_h":360,"thumb_480":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PMNF129-dbd06e3966\/someone_left_sunglasses_in_the_back_of_a_480.jpg","thumb_480_w":360,"thumb_480_h":480,"thumb_160":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PMNF129-dbd06e3966\/someone_left_sunglasses_in_the_back_of_a_160.jpg","thumb_720":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PMNF129-dbd06e3966\/someone_left_sunglasses_in_the_back_of_a_720.jpg","thumb_720_w":540,"thumb_720_h":720,"thumb_960":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PMNF129-dbd06e3966\/someone_left_sunglasses_in_the_back_of_a_960.jpg","thumb_960_w":720,"thumb_960_h":960,"thumb_1024":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PMNF129-dbd06e3966\/someone_left_sunglasses_in_the_back_of_a_1024.jpg","thumb_1024_w":768,"thumb_1024_h":1024,"image_exif_rotation":1,"original_w":1224,"original_h":1632,"permalink":"https:\/\/turingschool.slack.com\/files\/marinacor\/F0PMNF129\/someone_left_sunglasses_in_the_back_of_a.jpg","permalink_public":"https:\/\/slack-files.com\/T029P2S9M-F0PMNF129-db031431b6","channels":["C03HS2LS0"],"groups":[],"ims":[],"comments_count":0},"user":"U0FFKBL3F","upload":true,"display_as_bot":false,"username":"<@U0FFKBL3F|marinacor>","bot_id":null,"ts":"1456845078.000485"},{"type":"message","user":"U096YTZN1","text":"<http:\/\/www.denverpost.com\/editorials\/ci_29563108\/colorado-gop-blundered-2016-presidential-caucus>","attachments":[{"title":"Colorado
+        GOP blundered on 2016 presidential caucus","title_link":"http:\/\/www.denverpost.com\/editorials\/ci_29563108\/colorado-gop-blundered-2016-presidential-caucus","text":"The
+        Colorado Republican Party''s decision last summer to jettison a presidential
+        poll at its caucus on Tuesday looks worse with every passing day.","fallback":"Colorado
+        GOP blundered on 2016 presidential caucus","image_url":"http:\/\/extras.mnginteractive.com\/live\/media\/site36\/2016\/0225\/20160225__OP28CAUCUS~p1.jpg","from_url":"http:\/\/www.denverpost.com\/editorials\/ci_29563108\/colorado-gop-blundered-2016-presidential-caucus","image_width":382,"image_height":250,"image_bytes":78908,"id":1}],"ts":"1456804179.000483"},{"type":"message","user":"U096YTZN1","text":"There''s
+        actually no republican caucus in Colorado. ","ts":"1456804062.000482"},{"type":"message","user":"U09UKK56W","text":"Here\u2019s
+        a quick voter guide for tomorrow, Super Tuesday. \n\nPolitical parties, not
+        the government Board of Elections, organize tomorrow\u2019s \u201ccaucus.\u201d\n\nThe
+        Colorado Republican Party cancelled their caucus tomorrow, so only Democrats
+        are caucusing. The process is a little different than a traditional primary
+        or general election day. \n\nIf you want to participate:\n\n1) *Look up your
+        info* on the Colorado Secretary of State\u2019s office here: <https:\/\/www.sos.state.co.us\/voter-classic\/pages\/pub\/olvr\/findVoterReg.xhtml>.
+        You\u2019ll need to confirm you\u2019re a) *registered*, b) registered *before
+        Jan 4, 2016*, and c) a *registered Democrat*. You\u2019ll also need to grab
+        your precinct number for step 2.\n\n2) *Find your caucus location*, i.e. where
+        you go to vote, on the Colorado Democratic Party\u2019s \u201cDenver Caucus
+        Locations 2016\u201d guide: <http:\/\/www.coloradodems.org\/content\/denver-caucus-locations-2016>.
+        It\u2019s organized by precinct number (see step 1).\n\n3) *Show up* to caucus
+        at 6:30 PM tomorrow, 7:00 PM at the latest. Check additional resources for
+        what to expect.\n\nNot trying to be partisan \u2014 if the Republican Party
+        caucused tomorrow I\u2019d include that here too.\n\nMore info from the _Denver
+        Post_: <http:\/\/www.denverpost.com\/election\/ci_29570594\/colorado-caucus-10-things-you-need-know>\nMore
+        info from the Colorado Democrats website: <http:\/\/www.coloradodems.org\/action\/caucus-2016>","edited":{"user":"U09UKK56W","ts":"1456801552.000000"},"ts":"1456801408.000478","reactions":[{"name":"fire","users":["U0HRSRB0V","U07QJH78T","U02MYKGQB","U0DCH2M9A","U0EAU6Z41","U07QFRB19"],"count":6},{"name":"best-sebian","users":["U0DCH2M9A","U0DK1AD28","U09U4THDZ","U02D2TTKD","U04SM7SFP","U09U55T8B"],"count":6}]},{"type":"message","user":"U02MYKGQB","text":"if
+        u love slack spam <#C0NNXRRT2> always taking new recruits","ts":"1456787118.000474","reactions":[{"name":"watercooler-please","users":["U0HRSRB0V","U0DCH2M9A","U0EAU6Z41"],"count":3}]},{"type":"message","user":"U0C6CG4RL","text":"Check
+        the <#C0NUUMXC1> channel for a survey on today\u2019s Protocol","ts":"1456786801.000468"},{"type":"message","user":"U02D2TTKD","text":"I
+        Googled ReadMe templates so you wouldn\u2019t have to: <https:\/\/www.google.com\/search?q=template+for+readme&amp;oq=template+for+readme&amp;aqs=chrome..69i57.1794j0j1&amp;sourceid=chrome&amp;es_sm=91&amp;ie=UTF-8>\n\n:you-just-got-warbelowed:","ts":"1456786041.000467","reactions":[{"name":"you-just-got-warbelowed","users":["U02MYKGQB","U0DK1AD28","U0DCH2M9A","U0BF3JD2Q","U0BHMV2QG","U0E9ZQ6VB","U0EBD7HPS","U0DSNJEKW"],"count":8},{"name":"fun-raquel","users":["U0DF16TEH","U0E9ZQ6VB","U0DCH2M9A"],"count":3},{"name":"leap-day-william","users":["U0HA8DY4C","U0E9ZQ6VB","U0DCH2M9A"],"count":3}]},{"type":"message","user":"U02D2TTKD","text":"Read
+        me 4: <https:\/\/github.com\/acareaga\/tetris\/blob\/master\/README.md>","ts":"1456785895.000466"},{"type":"message","user":"U0C6CG4RL","text":"<https:\/\/devchat.tv\/ruby-rogues\/216-rr-code-review-culture-with-derek-prior>","ts":"1456785887.000465"},{"type":"message","user":"U02D2TTKD","text":"Read
+        me 3: <https:\/\/github.com\/matt-stj\/fall-down-js>","ts":"1456785887.000464"},{"type":"message","user":"U0C6CG4RL","text":"<https:\/\/github.com\/thoughtbot\/guides\/tree\/master\/code-review>","ts":"1456785876.000463"},{"type":"message","user":"U02D2TTKD","text":"Read
+        me 2: <https:\/\/github.com\/selfup\/DevOpsOne\/blob\/master\/README.md>","ts":"1456785875.000462"},{"type":"message","user":"U0C6CG4RL","text":"Everything
+        is linked in the slides, which are on <http:\/\/today.turing.io|today.turing.io>,
+        but here are some code review resources: <https:\/\/www.liberty.edu\/media\/1414\/%5B6401%5Dcode_review_checklist.pdf>","ts":"1456785866.000461"},{"type":"message","user":"U02D2TTKD","text":"Read
+        me 1: <https:\/\/github.com\/applegrain\/PDC>","ts":"1456785861.000460"},{"type":"message","user":"U04UEBSJK","text":"<https:\/\/github.com\/turingschool\/lesson_plans\/blob\/master\/ruby_02-web_applications_with_ruby\/git_redux.markdown>","ts":"1456785373.000459"},{"type":"message","user":"U02D2TTKD","text":"Here\u2019s
+        another list: <http:\/\/blog.fogcreek.com\/increase-defect-detection-with-our-code-review-checklist-example\/>","attachments":[{"service_name":"Fog
+        Creek Blog","title":"Stop More Bugs with our Code Review Checklist","title_link":"http:\/\/blog.fogcreek.com\/increase-defect-detection-with-our-code-review-checklist-example\/","text":"Checklists
+        are a great tool in code reviews - they ensure that reviews are consistently
+        performed throughout your team. They\u2019re also a handy way to ensure that
+        common issues are identified and resolved. Research suggests that programmers
+        make 15-20 common mistakes. So by adding such mistakes to a ch","fallback":"Fog
+        Creek Blog: Stop More Bugs with our Code Review Checklist","image_url":"http:\/\/blog.fogcreek.com\/wp-content\/uploads\/2015\/01\/100_blue-1.png","ts":1420706421,"from_url":"http:\/\/blog.fogcreek.com\/increase-defect-detection-with-our-code-review-checklist-example\/","image_width":375,"image_height":250,"image_bytes":131309,"id":1}],"ts":"1456785205.000457"},{"type":"message","user":"U02MYKGQB","text":"<@U02D2TTKD>:
+        <https:\/\/www.liberty.edu\/media\/1414\/%5B6401%5Dcode_review_checklist.pdf>","ts":"1456784363.000456"},{"type":"message","user":"U02D2TTKD","text":"<@U0C6CG4RL>:
+        do you mind posting a soft copy of the code review checklist here?","ts":"1456784268.000455"},{"type":"message","user":"U02D2TTKD","text":"Example
+        1: <https:\/\/docs.google.com\/document\/d\/1dm4_MmfOghUlkv1pAsVIPhTe77Rmpw4W6CwiBH0-aB0\/edit>\nExample
+        2: <https:\/\/docs.google.com\/document\/d\/1RRf60GBuLy047hj73CYTRZ-cVJnEyetvnQOQbw_NSm4\/edit>\nExample
+        3: <https:\/\/docs.google.com\/document\/d\/1fCuK4kandjVjJCPxAdZZjRHw_mw-C3mwxItI8FCLbpA\/edit>\nExample
+        4: <https:\/\/github.com\/martensonbj\/little_shop\/pull\/27>\nExample 5:
+        <https:\/\/github.com\/bethsecor\/little-shop-private-stache\/pull\/22>","ts":"1456784114.000454"},{"type":"message","user":"U02D2TTKD","text":"<https:\/\/github.com\/blog\/1943-how-to-write-the-perfect-pull-request>","ts":"1456783865.000453"},{"user":"U0PGAD57E","type":"message","subtype":"channel_join","text":"<@U0PGAD57E|applegrain_test>
+        has joined the channel","ts":"1456762740.000452","reactions":[{"name":"lovisa-the-swedish-goddess","users":["U07QJH78T","U07PWEAN9","U0DCH2M9A"],"count":3},{"name":"lovisa_codes","users":["U07QJH78T","U0DCH2M9A"],"count":2}]},{"type":"message","user":"U0JPGKA76","text":"Working
+        in teams:  <http:\/\/www.nytimes.com\/2016\/02\/28\/magazine\/what-google-learned-from-its-quest-to-build-the-perfect-team.html?_r=0>","ts":"1456757882.000451","reactions":[{"name":"leap-day-william","users":["U0HA8DY4C","U0DCH2M9A","U0JPGKA76"],"count":3}]},{"type":"message","user":"U029P2S9P","text":"FYI
+        I''m about to do a little network work. The Internet at the office will likely
+        be on and off until about 7:25. ","ts":"1456753847.000450","reactions":[{"name":"jeff_for_president","users":["U0HRSRB0V","U0DCH2M9A"],"count":2},{"name":"leap-day-william","users":["U0HA8DY4C","U0DCH2M9A"],"count":2}]},{"type":"message","user":"U09U4THDZ","text":"<https:\/\/soundcloud.com\/user-760220162\/turing-podcast-podcasting-102-how-do-you-make-a-technical-project-that-doesnt-suck>","attachments":[{"service_name":"SoundCloud","service_url":"http:\/\/soundcloud.com","title":"Turing
+        Podcast - Podcasting 102 - How do you make a technical project that doesn''t
+        suck? by Turing School Podcast","title_link":"https:\/\/soundcloud.com\/user-760220162\/turing-podcast-podcasting-102-how-do-you-make-a-technical-project-that-doesnt-suck","author_name":"Turing
+        School Podcast","author_link":"https:\/\/soundcloud.com\/user-760220162","thumb_url":"http:\/\/i1.sndcdn.com\/artworks-000148991545-8k7yqe-t500x500.jpg","text":"In
+        this module''s student-led session, Brennan Holtzclaw talks with a group of
+        other Turing students about what makes a good podcast and asks the question,
+        why don''t we hear any tech-focused podcasts that take advantage of such things?
+        Is a not-boring technical-focused podcast even possible?","fallback":"SoundCloud
+        Audio: Link: Turing Podcast - Podcasting 102 - How do you make a technical
+        project that doesn''t suck? by Turing School Podcast","audio_html":"<iframe
+        width=\"100%\" height=\"150\" scrolling=\"no\" frameborder=\"no\" src=\"https:\/\/w.soundcloud.com\/player\/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F249353926&show_artwork=true&maxheight=150\"><\/iframe>","audio_html_width":100,"audio_html_height":150,"from_url":"https:\/\/soundcloud.com\/user-760220162\/turing-podcast-podcasting-102-how-do-you-make-a-technical-project-that-doesnt-suck","thumb_width":500,"thumb_height":500,"id":1}],"ts":"1456688181.000448"},{"type":"message","user":"U09U4THDZ","text":"Another
+        Student-Led session culminates in a Turing Podcast episode!","ts":"1456688181.000447"},{"type":"message","user":"U06U9LUMA","text":"Ok
+        will lock up now","ts":"1456631986.000446","reactions":[{"name":"all_hail_king_regis","users":["U0DCH2M9A","U0ERRFV8B"],"count":2}]},{"type":"message","user":"U02B016TR","text":"<@U06U9LUMA>:
+        make sure you guys lock up nice, there some suspicious activity upstairs ","ts":"1456631276.000445","reactions":[{"name":"tan-doan-1","users":["U0DCH2M9A"],"count":1},{"name":"yung-jhun","users":["U07U5SQFM"],"count":1}]},{"type":"message","user":"U04SKGQFS","text":"<!channel>:
+        Guided meditation this Monday morning in classroom C between 8 and 8:30. Please
+        DM me with any questions. All are welcome. :sunglasses: Enjoy the weekend","edited":{"user":"U04SKGQFS","ts":"1456597096.000000"},"ts":"1456596884.000443","reactions":[{"name":"upvote","users":["U0C6CG4RL","U07PWEAN9","U09U55T8B","U07V02HU5","U0DCH2M9A","U0B38JAFQ","U07QFRB19"],"count":7}]},{"type":"message","user":"U0DCP9P7T","text":"thanks
+        Andrew!","ts":"1456587958.000442"},{"type":"message","user":"U03J8R009","text":"Yup
+        - switches are in b and the markers are in a cubbie but it''s probably pulled
+        out of the wall and sitting in the instructor area somewhere ","ts":"1456587249.000441"},{"type":"message","user":"U0E5GRGF8","text":"(light
+        switches)","ts":"1456587171.000440"},{"type":"message","user":"U0E5GRGF8","text":"<@U0DCP9P7T>
+        in B","ts":"1456587161.000439","reactions":[{"name":"just-ask-erinna","users":["U0DCH2M9A"],"count":1}]},{"type":"message","user":"U0DCP9P7T","text":"anotehr
+        question: where\u2019s the bin of markers? doesn\u2019t seem to be in the
+        usual bin spots","ts":"1456586926.000438"},{"type":"message","user":"U0DCP9P7T","text":"silly
+        question: where are the light switches for B\/C\/workspace?","ts":"1456586902.000437","reactions":[{"name":"hoopes-got-jokes","users":["U0DCH2M9A"],"count":1}]},{"type":"message","user":"U096YTZN1","text":"<@U0DFU543Y>,
+        <@U0ERRFV8B>, <@U0DK1AD28>: thank you! ","ts":"1456534279.000436","reactions":[{"name":"+1","users":["U0DK1AD28","U0ERRFV8B","U02D2TTKD","U0DFU543Y","U0DCH2M9A","U0EAU6Z41"],"count":6}]},{"type":"message","user":"U0DK1AD28","text":"<@U0DFU543Y>:
+        <@U0ERRFV8B> and I did","ts":"1456534102.000435"},{"type":"message","user":"U096YTZN1","text":"<@U0DCG71M0>:
+        thanks for going though! No one told me they did it! ","ts":"1456534040.000434"},{"type":"message","user":"U0DCG71M0","text":"<@U096YTZN1>:  there
+        wasn\u2019t anything there. Hopefully someone already let you know they were
+        going to grab them!","edited":{"user":"U0DCG71M0","ts":"1456533995.000000"},"ts":"1456533952.000429"},{"type":"message","user":"U096YTZN1","text":"Just
+        let me know. ","ts":"1456532989.000427"},{"type":"message","user":"U096YTZN1","text":"<!here>
+        there are a bunch of boxes with Turing''s name on it by the mailboxes upstairs.
+        If you''re available and can bring them down to the staff area, I''ll have
+        homemade desserts for you on Monday! ","ts":"1456532959.000426"},{"type":"message","user":"U0DCTT597","text":"For
+        all those interested in the weekly Node meet up I\u2019ll be facilitating,
+        go ahead and click on the node emoji and dm me times that would work for ya!","ts":"1456527139.000425","reactions":[{"name":"nodejs","users":["U0DCTT597","U0ERRFV8B","U09UB1KCN","U0DCH2M9A","U09CU0V7U"],"count":5},{"name":"watercooler-please","users":["U0DCH2M9A"],"count":1},{"name":"turing-channel-please","users":["U0DCH2M9A"],"count":1}]},{"type":"message","user":"U06U9LUMA","text":"Oh
+        awesome link Meeka!","ts":"1456527130.000424"},{"type":"message","user":"U02FM471Z","text":"installing
+        nvm through brew can _sometimes_cause issues - so it\u2019s good to know multiple
+        ways to install","ts":"1456527097.000422"},{"type":"message","user":"U02FM471Z","text":"<http:\/\/stackoverflow.com\/questions\/28017374\/what-is-the-suggested-way-to-install-brew-node-js-io-js-nvm-npm-on-os-x>","edited":{"user":"U02FM471Z","ts":"1456527104.000000"},"ts":"1456527058.000420"},{"type":"message","user":"U06U9LUMA","text":"Haha
+        no worries :simple_smile:","ts":"1456526855.000419"},{"type":"message","user":"U0DCP9P7T","text":"i
+        was using julian\u2019s tutorial, dind\u2019t have a reason to quesiton it
+        :wink:","ts":"1456526843.000418"},{"type":"message","user":"U06U9LUMA","text":"Awesome
+        README btw!","ts":"1456526841.000417"},{"type":"message","user":"U06U9LUMA","text":"Just  a
+        heads up, we use homebrew because it is a package manager. \n\n`brew update`\n`brew
+        install nvm`\n`source $(brew --prefix nvm)\/nvm.sh`\n\nUnless you don\u2019t
+        like having things managed for you, homebrew should be the #1 source of thruth
+        as a dev","ts":"1456526781.000416"},{"type":"message","user":"U0DCP9P7T","text":"if
+        anyone is still trying to install node, for some reason this command worked
+        for me ```source ~\/.nvm\/nvm.sh``` where the others didn''t","ts":"1456525953.000415"},{"type":"message","user":"U03J8R009","text":"<https:\/\/github.com\/julsfelic\/from_ruby_to_node>","ts":"1456524749.000414"},{"type":"message","user":"U0DCP9P7T","text":"thank
+        you, robot creators :simple_smile:","ts":"1456524630.000413"},{"type":"message","user":"U0DCP9P7T","text":"thanks
+        rachel!","ts":"1456524560.000412"},{"type":"message","user":"U02D2TTKD","text":"^
+        for heidi\u2019s talk","ts":"1456523708.000411"},{"type":"message","user":"U02D2TTKD","text":"192.168.2.92:9393","ts":"1456523702.000410"},{"type":"message","user":"U029P2S9P","text":"Thanks
+        for participating in today\u2019s Gear Up. If you have suggestions for additional
+        articles, questions, or changes please shoot your changes to the document
+        here: <https:\/\/github.com\/turingschool\/gear-up\/blob\/master\/allyship.markdown>
+        . If you have feedback you\u2019re willing to share publicly please drop in
+        <#C0P48A2LU> and let us hear it. If you\u2019d like to share privately shoot
+        me, <@U09UKK56W>, or <@U0DK1AD28> a DM. If you\u2019d like to be a facilitator
+        for next week\u2019s session which will be about *sustainability*, join the
+        <#C0P48A2LU> channel.","ts":"1456520173.000409"},{"type":"message","user":"U04UEBSJK","text":"Does
+        anyone actually know Brittany Wilkerson?????    I got a LinkedIn invite from
+        her and she has 25 other turing connections but I think it\u2019s a fake account.   Can
+        someone confirm this is a real human called Brittany Wilkerson?","ts":"1456517891.000408"},{"user":"U044N088N","type":"message","subtype":"channel_leave","text":"<@U044N088N|sally>
+        has left the channel","ts":"1456515448.000407"},{"user":"U044N088N","inviter":"U0DCH2M9A","type":"message","subtype":"channel_join","text":"<@U044N088N|sally>
+        has joined the channel","ts":"1456511235.000406"},{"type":"message","user":"U0DK1AD28","text":"<!here|@here>
+        Please share any feedback you have on the Gear Up today here: <http:\/\/goo.gl\/forms\/hCkgHFEpTt>","ts":"1456510863.000405","reactions":[{"name":"best-sebian","users":["U0DCH2M9A","U0DK1AD28","U07QF5JHG","U0C4JP8K1"],"count":4}]},{"type":"message","user":"U04T2GBH6","text":"Shoutout
+        to <@U09UKK56W> for leading the charge on this gear up. One of the most interesting
+        sessions I''ve been apart of ","ts":"1456509894.000404","reactions":[{"name":"tada","users":["U0E5GRGF8","U07QF5JHG","U07QJH78T","U0C6CG4RL","U07R80TCL","U096YTZN1","U0HRSRB0V","U07QFRB19","U02MYKGQB","U02D2TTKD"],"count":10},{"name":"upvote","users":["U0C6CG4RL","U0DK1AD28","U0DCP9P7T","U07R80TCL","U0HRSRB0V","U07QFF1T5","U0BER821K","U02D2TTKD"],"count":8},{"name":"trump","users":["U09U64HQQ","U0HRSRB0V"],"count":2},{"name":"best-sebian","users":["U0DCH2M9A","U0DK1AD28"],"count":2}]},{"user":"U044N088N","type":"message","subtype":"channel_leave","text":"<@U044N088N|sally>
+        has left the channel","ts":"1456509683.000403"},{"type":"message","user":"U0C6CG4RL","text":"<!here|@here>
+        Please start heading to the Big Workspace to hear our guest speaker, Rick
+        Newman! Thanks!","ts":"1456509652.000402"},{"type":"message","user":"U02D2TTKD","text":"<!channel>
+        Gear Up time! Check <http:\/\/today.turing.io|today.turing.io> and head to
+        your assigned area.","ts":"1456506377.000401"},{"user":"U06TNKJFL","type":"message","subtype":"channel_leave","text":"<@U06TNKJFL|rose>
+        has left the channel","ts":"1456503071.000400"},{"type":"message","user":"U0C6CG4RL","text":"<!here|@here>
+        Here are the Student Advisory Board notes from yesterday: <https:\/\/docs.google.com\/document\/d\/1dwnht4LpWaKL__eghEw0aZIoRlCronQLC96cgrTILyo\/edit?usp=sharing>
+        Look them over for anything you want to talk about at Group Retro","ts":"1456502222.000399"},{"type":"message","user":"U096YTZN1","text":"Probably
+        won''t arrive until the early afternoon ","ts":"1456499437.000398","reactions":[{"name":"cry","users":["U07PWEAN9","U0JRVSSAC","U0DCH2M9A","U09CU0V7U"],"count":4}]},{"type":"message","user":"U096YTZN1","text":"<@U0E5GRGF8>:
+        from yesterday - <!here> so more coffee will be delivered tomorrow. If you''re
+        a coffee drinker and notice our supply is low, please help me out and let
+        me know so I can have more ready before we run out. Thanks! ","ts":"1456499413.000397"},{"type":"message","user":"U0E5GRGF8","text":"<@U096YTZN1>:
+        coffeee???","ts":"1456499250.000396"},{"user":"U03JJ9VQ5","type":"message","subtype":"channel_leave","text":"<@U03JJ9VQ5|michaelm>
+        has left the channel","ts":"1456499038.000395"},{"type":"message","user":"U02D2TTKD","text":"Just
+        want to put this on people\u2019s radars \u2014 the ninth grade from the school
+        I co-founded in Las Vegas is coming to Denver the weekend of March 19 to visit
+        colleges (and Turing, of course :simple_smile: ). *This is during intermission
+        week*. It\u2019s about 40 ninth graders total, and I\u2019d love to get some
+        Turing students for a Q&amp;A, project demos, and a small intro to coding
+        workshop. If you\u2019re interested and available in the morning of March
+        19, join <#C02Q33Z71> and I\u2019ll post more deets there.","ts":"1456444725.000394","reactions":[{"name":"upvote","users":["U0C6CG4RL","U0DCH2M9A"],"count":2},{"name":"fun-raquel","users":["U0DCH2M9A"],"count":1},{"name":"you-just-got-warbelowed","users":["U0DCH2M9A"],"count":1}]},{"type":"message","user":"U0JL28WLR","text":"<!here|@here>
+        is anyone feeling separation anxiety from their ipod\/iphone (some apple product)?
+        it appears one is presently stationed on the shelf by the paper towels in
+        the bathroom by classroom A","ts":"1456443204.000393","reactions":[{"name":"turing-channel-please","users":["U0HA8DY4C","U0DCH2M9A"],"count":2},{"name":"nice-profile-pic","users":["U0DCH2M9A"],"count":1}]},{"type":"message","user":"U07QJH78T","text":"Tomorrow,
+        LGBTuring event at Society after wrap up (literally down the street) - all
+        the cool kids are coming :simple_smile:","ts":"1456441808.000392","reactions":[{"name":"linux","users":["U06U9LUMA","U0DCH2M9A"],"count":2}]},{"type":"message","subtype":"pinned_item","user":"U07QJH78T","item_type":"C","attachments":[{"color":"D0D0D0","fallback":"[February
+        19th, 2016 6:53 PM] at-sekhar: hey folks, meant to announce at wrap up, but
+        LGBTuring is hosting our once a module social event, this time down the street
+        at Society, the sports bar (1434 Blake St.). It''ll be next Friday, 2\/26
+        at 4:30 pm, and Turing will likely cover appetizers (but not drinks). DM me
+        with any questions and join the channel at <#C09RJUB6C>","author_subname":"at-sekhar","ts":"1455926035.000260","text":"hey
+        folks, meant to announce at wrap up, but LGBTuring is hosting our once a module
+        social event, this time down the street at Society, the sports bar (1434 Blake
+        St.). It''ll be next Friday, 2\/26 at 4:30 pm, and Turing will likely cover
+        appetizers (but not drinks). DM me with any questions and join the channel
+        at <#C09RJUB6C>","author_name":"Sekhar Paladugu","author_link":"https:\/\/turingschool.slack.com\/team\/at-sekhar","author_icon":"https:\/\/avatars.slack-edge.com\/2016-02-24\/22903087152_5078d2bf6d8f1ba0979f_48.jpg","mrkdwn_in":["text"]}],"text":"<@U07QJH78T|at-sekhar>
+        pinned a message to this channel.","ts":"1456441779.000391"},{"user":"U0P4J1WFQ","type":"message","subtype":"channel_join","text":"<@U0P4J1WFQ|codingzero>
+        has joined the channel","ts":"1456439754.000390"},{"user":"U0P437H28","type":"message","subtype":"channel_join","text":"<@U0P437H28|rbatty>
+        has joined the channel","ts":"1456436799.000389"}],"has_more":true}'
+    http_version: 
+  recorded_at: Wed, 02 Mar 2016 00:04:17 GMT
+recorded_with: VCR 3.0.1

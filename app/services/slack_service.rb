@@ -1,17 +1,19 @@
 class SlackService
-  attr_reader :slack
+  attr_reader :conn
 
   def initialize
-    @slack = Faraday.new(:url => 'http://slack.com/api') do |faraday|
+    @conn = Faraday.new(:url => 'https://slack.com') do |faraday|
       faraday.request  :url_encoded
       faraday.adapter  Faraday.default_adapter
+    end
   end
 
   def pull_new_messages(channel, token)
-    response = slack.get do |req|
-      req.url '/channels.history'
+    response = conn.get do |req|
+      req.url '/api/channels.history'
       req.params['channel'] = channel
       req.params['token'] = token
+    end
   end
 
 

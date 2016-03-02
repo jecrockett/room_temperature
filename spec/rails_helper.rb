@@ -41,6 +41,15 @@ OmniAuth.config.mock_auth[:slack] = OmniAuth::AuthHash.new({
   }
 })
 
+VCR.configure do |c|
+  #the directory where your cassettes will be saved
+  c.cassette_library_dir = 'spec/vcr'
+  # your HTTP request service. You can also use fakeweb, webmock, and more
+  c.hook_into :webmock
+  c.allow_http_connections_when_no_cassette = true
+end
+
+
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
