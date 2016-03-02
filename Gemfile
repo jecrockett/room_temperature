@@ -11,6 +11,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'figaro'
 gem 'omniauth-slack'
 gem 'faraday'
+gem 'indico'
 
 group :development, :test do
   gem 'pry-byebug', require: 'pry-byebug'

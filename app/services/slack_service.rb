@@ -14,6 +14,8 @@ class SlackService
       req.params['channel'] = channel
       req.params['token'] = token
     end
+    parsed_response = JSON.parse(response.body)
+    parsed_response['messages'].to_a
   end
 
 

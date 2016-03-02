@@ -11,18 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160301232000) do
+ActiveRecord::Schema.define(version: 20160302024924) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "sentiments", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "channel_id"
+    t.string   "slack_id"
+    t.decimal  "score"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "sentiments", ["user_id"], name: "index_sentiments_on_user_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "u_id"
+    t.string   "team_name"
     t.string   "token"
     t.string   "nickname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "t_id"
   end
 
+  add_foreign_key "sentiments", "users"
 end

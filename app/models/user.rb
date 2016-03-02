@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
     user = User.find_or_create_by(u_id: auth['uid'], token: auth['credentials']['token'])
 
     user.nickname = auth['info']['nickname']
-    user.t_id = auth['info']['team_id']
+    user.team = auth['info']['team']
 
     user.save
     user
