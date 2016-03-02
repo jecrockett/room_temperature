@@ -10,6 +10,9 @@ task pull_messages: [:environment] do
   slack = SlackService.new
   Indico.api_key = ENV['INDICO_KEY']
 
+  # call channel.all, iterate through
+  # replace hardcoded C02B05SDQ in slack call and sentiment creation
+
   response = slack.pull_new_messages("C02B05SDQ", ENV['SLACK_TOKEN'])
 
   next if response.empty?
@@ -19,6 +22,7 @@ task pull_messages: [:environment] do
 
   # ensures database entries are added from most outdated to most recent
   response.reverse!
+  sentiments.reverse!
 
   response.each_with_index do |info, index|
     s = Sentiment.create
