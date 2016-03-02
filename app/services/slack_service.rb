@@ -19,5 +19,4 @@ class SlackService
     parsed_response['messages'].to_a
   end
 
-
 end
