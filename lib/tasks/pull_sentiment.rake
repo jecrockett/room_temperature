@@ -1,4 +1,4 @@
-require 'indico'
+
 
 desc "TODO"
 task pull_messages: [:environment] do
@@ -12,8 +12,13 @@ task pull_messages: [:environment] do
 
   response = slack.pull_new_messages("C02B05SDQ", ENV['SLACK_TOKEN'])
 
+  next if response.empty?
+
   messages = response.map { |msg_hash| msg_hash["text"] }
   sentiments = Indico.sentiment(messages)
+
+  # ensures database entries are added from most outdated to most recent
+  response.reverse!
 
   response.each_with_index do |info, index|
     s = Sentiment.create
@@ -24,6 +29,5 @@ task pull_messages: [:environment] do
 
     s.save
   end
-  binding.pry
 
 end

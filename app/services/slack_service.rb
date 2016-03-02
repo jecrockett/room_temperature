@@ -13,6 +13,7 @@ class SlackService
       req.url '/api/channels.history'
       req.params['channel'] = channel
       req.params['token'] = token
+      req.params['oldest'] = Sentiment.last.slack_id
     end
     parsed_response = JSON.parse(response.body)
     parsed_response['messages'].to_a
