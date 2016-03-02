@@ -11,7 +11,7 @@ RSpec.describe SlackService do
         response = slack.pull_new_messages(channel, user.token)
 
         expect(response.first.keys).to include("user", "type", "text", "ts")
-       end
-     end
+      end
+    end
   end
 end
