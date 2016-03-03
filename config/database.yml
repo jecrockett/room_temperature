@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: room_temperature_production
-  username: room_temperature
-  password: <%= ENV['ROOM_TEMPERATURE_DATABASE_PASSWORD'] %>

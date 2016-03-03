@@ -2,10 +2,26 @@
 <div class="dashboard-wrapper">
   <h1>Sentiment Dashboard</h1>
 
-  <div class="filters">
 
+  <%= simple_form_for(:channel_filter, url: dashboard_path, method: :get) do |f| %>
+      <%= f.label :channel %>
+      <%= f.collection_select :channel, Channel.all, :id, :name %>
+  <% end %>
+
+  <%= form_tag(dashboard_path, method: :get) do %>
+      <%= select_tag(:channel, options_for_select(Channel.all), prompt: "Select a Channel") %>
+    <%= submit_tag "Filter" %>
+  <% end %>
+
+  <%= form_for(:channel_filter, url: dashboard_path) do |f| %>
+    <%= f.collection_select :channel, Channel.all, :id, :name %>
+    <%= f.submit %>
+  <% end %>
+
+  <div class="filters">
     <!-- Dropdown Triggers -->
     <!---REPLACE THIS WITH FORMS--->
+
     <a class='dropdown-button btn' href='#' data-activates='channels_dropdown' data-beloworigin='true'>Select Channel</a>
     <a class='dropdown-button btn' href='#' data-activates='users_dropdown' data-beloworigin='true'>Select User</a>
     <a class='dropdown-button btn' href='#' data-activates='time_range_dropdown' data-beloworigin='true'>Select Time Range</a>

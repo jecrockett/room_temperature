@@ -14,6 +14,7 @@ gem 'faraday'
 gem 'indico'
 gem 'chartkick'
 gem 'lazy_high_charts'
+gem 'simple_form'
 
 
 group :development, :test do
@@ -33,4 +34,8 @@ end
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
+end
+
+group :production do
+  gem 'rails_12factor'
 end

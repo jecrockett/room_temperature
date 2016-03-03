@@ -17,10 +17,20 @@
 
 h1 {
   font-size: 3.5em;
+  font-family: 'Poiret One';
+
 }
 
 h3 {
   font-size: 2em;
+  font-family: 'Poiret One';
+}
+
+/* NAV */
+
+nav {
+  font-family: 'Poiret One';
+  background-color: #8fbfe5;
 }
 
 
@@ -28,7 +38,7 @@ h3 {
 
 .home-wrapper {
   height: 100vh;
-  background-image: url("/assets/home_background.png");
+  background-image: image-url("home_background.png");
   background-size: cover;
 }
 
@@ -71,5 +81,10 @@ h3 {
     height: 150px;
     text-align: center;
     padding-top: 40px;
+    a {
+      background-color: #e9d7b9;
+      color: black;
+      font-family: 'Poiret One';
+    }
   }
 }
