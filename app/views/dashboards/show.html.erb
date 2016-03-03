@@ -1,3 +1,12 @@
+<%= javascript_include_tag "path/to/highcharts.js", "chartkick" %>
 <h1>Dashboard</h1>
 
 <%= @user.nickname %>
+
+<div id="chart" class="container">
+  <h5 class="center">Sentiment</h5>
+  <!-- <% plot = Sentiment.where(channel_id: 2).all.map {|s| [(Time.at(s.slack_id.to_i).to_s.split[1]), s.score]} %>
+  <% scatter_chart plot %> -->
+  <%= scatter_chart Sentiment.where(channel_id: 2).pluck(:slack_id, :score) %>
+  <%= line_chart Sentiment.where(channel_id: 2).group(:slack_id).average(:score) %>
+</div>

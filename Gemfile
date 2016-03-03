@@ -12,6 +12,9 @@ gem 'figaro'
 gem 'omniauth-slack'
 gem 'faraday'
 gem 'indico'
+gem 'chartkick'
+gem 'lazy_high_charts'
+
 
 group :development, :test do
   gem 'pry-byebug', require: 'pry-byebug'
