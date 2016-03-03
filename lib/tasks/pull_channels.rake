@@ -1,11 +1,11 @@
 desc "TODO"
-task pull_messages: [:environment] do
+task pull_channels: [:environment] do
   slack = SlackService.new
   Indico.api_key = ENV['INDICO_KEY']
   channels = Channel.all
 
   channels.each do |channel|
-    response = slack.pull_new_messages(channel, ENV['SLACK_TOKEN'])
+    response = slack.pull_new_channels(channel, ENV['SLACK_TOKEN'])
 
     if response.empty?
       puts "No new messages in #{channel.name}."

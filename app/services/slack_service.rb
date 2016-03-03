@@ -8,13 +8,25 @@ class SlackService
     end
   end
 
-  def pull_new_messages(channel, token)
+  def pull_new_channels(channel, token)
     response = conn.get do |req|
       req.url '/api/channels.history'
       req.params['channel'] = channel.slack_id
       req.params['token'] = token
       req.params['oldest'] = Sentiment.where(channel_id: channel.id).last.slack_id if Sentiment.where(channel_id: channel.id).last
     end
+    parsed_response = JSON.parse(response.body)
+    parsed_response['messages'].to_a
+  end
+
+  def pull_new_groups(group, token)
+    response = conn.get do |req|
+      req.url '/api/groups.history'
+      req.params['channel'] = group
+      req.params['token'] = token
+      req.params['oldest'] = Sentiment.where(channel_id: group).last.slack_id if Sentiment.where(channel_id: group).last
+    end
+    binding.pry
     parsed_response = JSON.parse(response.body)
     parsed_response['messages'].to_a
   end

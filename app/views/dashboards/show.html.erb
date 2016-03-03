@@ -1,12 +1,40 @@
-<%= javascript_include_tag "path/to/highcharts.js", "chartkick" %>
-<h1>Dashboard</h1>
+<%= javascript_include_tag "chartkick" %>
+<div class="dashboard-wrapper">
+  <h1>Sentiment Dashboard</h1>
 
-<%= @user.nickname %>
+  <div class="filters">
 
-<div id="chart" class="container">
-  <h5 class="center">Sentiment</h5>
-  <!-- <% plot = Sentiment.where(channel_id: 2).all.map {|s| [(Time.at(s.slack_id.to_i).to_s.split[1]), s.score]} %>
-  <% scatter_chart plot %> -->
-  <%= scatter_chart Sentiment.where(channel_id: 2).pluck(:slack_id, :score) %>
-  <%= line_chart Sentiment.where(channel_id: 2).group(:slack_id).average(:score) %>
+    <!-- Dropdown Triggers -->
+    <!---REPLACE THIS WITH FORMS--->
+    <a class='dropdown-button btn' href='#' data-activates='channels_dropdown' data-beloworigin='true'>Select Channel</a>
+    <a class='dropdown-button btn' href='#' data-activates='users_dropdown' data-beloworigin='true'>Select User</a>
+    <a class='dropdown-button btn' href='#' data-activates='time_range_dropdown' data-beloworigin='true'>Select Time Range</a>
+
+    <!-- Channels Dropdown Structure -->
+    <ul id='channels_dropdown' class='dropdown-content'>
+      <% Channel.all.each do |ch| %>
+        <li><%= ch.name.upcase %></li>
+      <% end %>
+    </ul>
+
+    <!-- UsersDropdown Structure -->
+    <ul id='users_dropdown' class='dropdown-content'>
+      <% User.where.not(nickname: nil).each do |u| %>
+        <li><%= u.nickname.upcase %></li>
+      <% end %>
+    </ul>
+
+    <!-- Time Range Structure -->
+    <ul id='time_range_dropdown' class='dropdown-content'>
+      <li>BY DAY</li>
+      <li>BY WEEK</li>
+    </ul>
+
+  </div>
+
+  <div id="chart" class="container">
+    <h3 class="center">Sentiment</h3>
+    <%= scatter_chart Sentiment.where(channel_id: 2).pluck(:slack_id, :score) %>
+    <% line_chart Sentiment.where(channel_id: 2).group(:slack_id).average(:score) %>
+  </div>
 </div>
