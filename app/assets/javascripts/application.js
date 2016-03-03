@@ -17,3 +17,7 @@
 
 //= require highcharts/highcharts
 //= require highcharts/highcharts-more
+
+$(document).ready(function() {
+    $('select').material_select();
+});
