@@ -5,7 +5,7 @@ task pull_settlers: [:environment] do
   settlers = 'G0LFSMSRH'
 
   response = slack.pull_new_groups(settlers, ENV['SLACK_TOKEN'])
-
+binding.pry
   if response.empty?
     puts "No new messages in settlers-hardcore."
     next

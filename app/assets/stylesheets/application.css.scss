@@ -79,12 +79,26 @@ nav {
   }
   .filters {
     height: 150px;
-    text-align: center;
     padding-top: 40px;
-    a {
-      background-color: #e9d7b9;
-      color: black;
-      font-family: 'Poiret One';
+    text-align: center;
+    .field {
+      width: 250px;
+      display: inline-block;
+      padding-left: 50px;
+      .submit-btn {
+        margin-left: 10px;
+        padding: 15px;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 4px;
+      }
     }
   }
+}
+
+
+
+.select-wrapper input.select-dropdown {
+  width: 230px;
+  margin-left: 15px;
 }
