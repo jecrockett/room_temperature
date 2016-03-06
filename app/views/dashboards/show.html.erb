@@ -4,12 +4,24 @@
 
 
 
-  <div class="filters container">
+  <div class="filters">
     <%= form_tag(dashboard_path) do %>
       <div class="field">
         <div class="input-field">
-          <%= select_tag(:channel, options_from_collection_for_select(Channel.all, "id", "name")) %>
-          <%= label_tag 'channel', 'Select a Channel:' %>
+          <%= select_tag(:channel, options_from_collection_for_select(Channel.all, "id", "name"), include_blank: true) %>
+          <%= label_tag 'channel', 'Select a Channel (required):' %>
+        </div>
+      </div>
+      <div class="field">
+        <div class="input-field">
+          <%= select_tag(:user, options_from_collection_for_select(User.where.not(nickname: nil), "id", "nickname"), include_blank: true) %>
+          <%= label_tag 'user', 'Filter by User (optional):' %>
+        </div>
+      </div>
+      <div class="field">
+        <div class="input-field">
+          <%= select_tag(:range, options_for_select(["Weekly", "Daily"])) %>
+          <%= label_tag 'user', 'Filter by User (optional):' %>
         </div>
       </div>
       <div class="field">
@@ -19,8 +31,12 @@
   </div>
 
   <div id="chart" class="container">
-    <h3 class="center">Sentiment</h3>
-    <%= scatter_chart Sentiment.where(channel_id: 2).pluck(:slack_id, :score) %>
-    <%= line_chart Sentiment.where(channel_id: 2).group_by_second(:slack_id).average(:score) %>
+    <h3 class="center">Sentiment by Slack Channel</h3>
+    <br>
+    <% if @graph_data.nil? %>
+      <h5>Please select a channel from the dropdown menu.</h5>
+    <% else %>
+      <%= scatter_chart @graph_data , min: 0, max: 1 %>
+    <% end %>
   </div>
 </div>

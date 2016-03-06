@@ -25,7 +25,7 @@ task pull_channels: [:environment] do
       s.channel_id = channel.id
       s.team_id = channel.team.id
       s.slack_id = info['ts']
-      s.timestamp = into['ts'].to_i
+      s.timestamp = Time.at(info['ts'].to_i).to_datetime
       s.score = sentiments[index]
 
       s.save
