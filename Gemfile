@@ -13,8 +13,7 @@ gem 'omniauth-slack'
 gem 'faraday'
 gem 'indico'
 gem 'chartkick'
-gem 'lazy_high_charts'
-gem 'simple_form'
+gem 'groupdate'
 
 
 group :development, :test do

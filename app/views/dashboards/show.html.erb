@@ -1,4 +1,4 @@
-<%= javascript_include_tag "chartkick" %>
+<%= javascript_include_tag "https://www.google.com/jsapi", "chartkick" %>
 <div class="dashboard-wrapper">
   <h1>Sentiment Dashboard</h1>
 
@@ -21,6 +21,6 @@
   <div id="chart" class="container">
     <h3 class="center">Sentiment</h3>
     <%= scatter_chart Sentiment.where(channel_id: 2).pluck(:slack_id, :score) %>
-    <% line_chart Sentiment.where(channel_id: 2).group(:slack_id).average(:score) %>
+    <%= line_chart Sentiment.where(channel_id: 2).group_by_second(:slack_id).average(:score) %>
   </div>
 </div>
