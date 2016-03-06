@@ -13,8 +13,7 @@ task pull_channels: [:environment] do
     end
 
     messages = response.map { |msg_hash| msg_hash["text"] }
-    sanitized_messages = MessageSanitizer.sanitize(messages)
-    sentiments = Indico.sentiment(sanitized_messages)
+    sentiments = Indico.sentiment(messages)
 
 
     # ensures new database entries are added from most outdated to most recent
