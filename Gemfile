@@ -28,6 +28,7 @@ end
 group :test do
     gem 'simplecov', require: false
     gem 'webmock'
+    gem 'shoulda-matchers'
 end
 
 group :development do

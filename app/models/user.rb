@@ -1,4 +1,10 @@
 class User < ActiveRecord::Base
+  validates :u_id, presence: true,
+                   uniqueness: true
+
+  belongs_to :team
+  has_many :sentiments
+
   def self.find_or_create_from_auth(auth)
     user = User.find_or_create_by(u_id: auth['uid'])
 
