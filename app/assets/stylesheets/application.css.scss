@@ -14,6 +14,9 @@
  *= require_self
  */
 
+body {
+  font-family: 'Poiret One';
+}
 
 h1 {
   font-size: 3.5em;
@@ -21,9 +24,18 @@ h1 {
 
 }
 
+h2 {
+  font-size: 2.5em;
+  font-family: 'Poiret One';
+}
+
 h3 {
   font-size: 2em;
   font-family: 'Poiret One';
+}
+
+h4 {
+  font-size: 1.7em;
 }
 
 /* NAV */
@@ -73,7 +85,7 @@ nav {
 /* SENTIMENT DASHBOARD */
 
 .dashboard-wrapper {
-  h1 {
+  h2 {
     padding-top: 30px;
     text-align: center;
   }
@@ -91,6 +103,12 @@ nav {
         border: 1px solid black;
         border-radius: 4px;
       }
+    }
+  }
+  #chart {
+    z-index: 1;
+    h3 {
+      z-index: 100;
     }
   }
 }
