@@ -4,17 +4,14 @@ class GraphManager
     if channel.nil? || channel.empty?
       nil
     elsif user.empty?
-      if range == 'Weekly'
-        Sentiment.weekly.where(channel_id: channel).pluck(:slack_id, :score)
-      elsif range == 'Daily'
-        Sentiment.daily.where(channel_id: channel).pluck(:slack_id, :score)
-      end
+      sentiments_scoped(range).where(channel_id: channel).pluck(:slack_id, :score)
     else
-      if range == 'Weekly'
-        Sentiment.weekly.where(channel_id: channel, user_id: user).pluck(:slack_id, :score)
-      elsif range == 'Daily'
-        Sentiment.daily.where(channel_id: channel, user_id: user).pluck(:slack_id, :score)
-      end
+      sentiments_scoped(range).where(channel_id: channel, user_id: user).pluck(:slack_id, :score)
     end
+  end
+
+  def sentiments_scoped(range)
+    return Sentiment.weekly  if range == "Weekly"
+    return Sentiment.daily   if range == "Daily"
   end
 end
