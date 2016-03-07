@@ -5,5 +5,4 @@ RSpec.describe Sentiment, type: :model do
   it { should validate_presence_of(:team_id) }
   it { should validate_presence_of(:channel_id) }
   it { should validate_presence_of(:slack_id) }
-  it { should validate_uniqueness_of(:slack_id) }
 end

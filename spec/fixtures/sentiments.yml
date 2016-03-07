@@ -1,0 +1,39 @@
+first:
+  user_id: 1
+  team_id: 1
+  channel_id: 1
+  slack_id: "1456499038.000395"
+  score: 0.143132564466949
+  created_at: <%= 3.days.ago.to_datetime %>
+  updated_at: <%= 3.days.ago.to_datetime %>
+  timestamp: <%= 3.days.ago.to_datetime %>
+
+second:
+  user_id: 1
+  team_id: 1
+  channel_id: 1
+  slack_id: "1456509652.000402"
+  score: 0.869755017562222
+  created_at: <%= 20.hours.ago.to_datetime %>
+  updated_at: <%= 20.hours.ago.to_datetime %>
+  timestamp: <%= 20.hours.ago.to_datetime %>
+
+third:
+  user_id: 1
+  team_id: 1
+  channel_id: 2
+  slack_id: "1456509683.000403"
+  score: 0.142804285386363
+  created_at: <%= 20.hours.ago.to_datetime %>
+  updated_at: <%= 20.hours.ago.to_datetime %>
+  timestamp: <%= 20.hours.ago.to_datetime %>
+
+fourth:
+  user_id: 2
+  team_id: 1
+  channel_id: 2
+  slack_id: "1456509894.000404"
+  score: 0.93349212027112
+  created_at: <%= 20.hours.ago.to_datetime %>
+  updated_at: <%= 20.hours.ago.to_datetime %>
+  timestamp: <%= 20.hours.ago.to_datetime %>

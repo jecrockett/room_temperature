@@ -2,8 +2,7 @@ class Sentiment < ActiveRecord::Base
   validates :user_id,    presence: true
   validates :team_id,    presence: true
   validates :channel_id, presence: true
-  validates :slack_id,   presence: true,
-                         uniqueness: true
+  validates :slack_id,   presence: true
 
   belongs_to :user
   belongs_to :channel

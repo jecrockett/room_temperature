@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://slack.com/api/channels.history?channel=C03HS2LS0&token=xoxp-2329094327-10377755170-23775525907-73891740df
+    uri: https://slack.com/api/channels.history?channel=C03HS2LS0&oldest=1456509652.000402&token=xoxp-2329094327-10377755170-24063830484-042e3cc287
     body:
       encoding: US-ASCII
       string: ''
@@ -20,8 +20,8 @@ http_interactions:
     headers:
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '9196'
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Access-Control-Allow-Origin:
@@ -31,7 +31,7 @@ http_interactions:
       Content-Security-Policy:
       - referrer no-referrer;
       Date:
-      - Wed, 02 Mar 2016 19:13:35 GMT
+      - Mon, 07 Mar 2016 02:29:00 GMT
       Expires:
       - Mon, 26 Jul 1997 05:00:00 GMT
       Pragma:
@@ -45,7 +45,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Oauth-Scopes:
-      - identify,channels:history,im:history,mpim:history,channels:read,team:read,users:read,usergroups:read
+      - identify,channels:history,im:history,mpim:history,channels:read,users:read
       X-Xss-Protection:
       - '0'
       Vary:
@@ -53,12 +53,30 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 83038ba72c6b8f14ce170ee7b725175e.cloudfront.net (CloudFront)
+      - 1.1 5ae8b0e76af80aa471660f48d35acb41.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - Yow5c4VbI23ar8WAj3AV3NC6Kl7LM3M5K5g-mg0j-zLIVef8sdYelQ==
+      - 5HgkavUsNTz7HHlxWaohOuu7jcTFSgQOmkYHgf3mxz3ltndSXS-RTg==
     body:
       encoding: ASCII-8BIT
-      string: '{"ok":true,"messages":[{"user":"U02Q2FPBZ","type":"message","subtype":"channel_leave","text":"<@U02Q2FPBZ|orion>
+      string: '{"ok":true,"oldest":"1456509652.000402","messages":[{"type":"message","user":"U02Q25H6V","text":"It
+        was my mistake - and I apologize, there is no rule of law here anymore, I
+        just ask that you try to be sparing and use the at here instead of the at
+        channel so you\u2019re not pinging 228 people with a notification whether
+        they are online or not","ts":"1456972968.000532"},{"type":"message","user":"U09U64HQQ","text":"We
+        need a slack vigilante like <@U0DCH2M9A> to throw down a giphy and see what
+        happens...","ts":"1456972581.000531","reactions":[{"name":"grumpy-baby","users":["U0DCH2M9A","U09U4L96J"],"count":2}]},{"type":"message","user":"U0BHMV2QG","text":"There
+        is no standard in the Turing channel now. No authoritative voice anymore.
+        Posts must live or die by the wrath of the :fire:","ts":"1456971256.000530"},{"type":"message","user":"U0DCP9P7T","text":"I
+        thought use of Turing channel was more open now with added announcement channel.
+        Could someone clarify either way? So we don''t get :fire: ","ts":"1456962847.000529"},{"type":"message","user":"U0DK1AD28","text":"This
+        week\u2019s Gear Up will be on environmental responsibility. If you would
+        like to be a student facilitator, please join the <#C0P48A2LU> channel. This
+        will entail looking at the readings ahead of time and attending a prep meeting
+        Friday 8-8:30am. FUN FUN FUN FUN FUN FUN <!here|@here>","ts":"1456959092.000528","reactions":[{"name":"team-soylent","users":["U0DCH2M9A"],"count":1},{"name":"upvote","users":["U0DCP9P7T","U0DCH2M9A"],"count":2}]},{"type":"message","user":"U0B38JAFQ","text":"<@U02Q25H6V>:  \"Things
+        that people, actually in Denver, might care about.\"   Thanks for the delete.","ts":"1456958169.000527","reactions":[{"name":"fire","users":["U0DK1AD28","U07R80TCL","U0AB3N750","U09UM37CY","U0BF3JD2Q","U0DCH2M9A"],"count":6},{"name":"watercooler-please","users":["U0DCH2M9A"],"count":1}]},{"type":"message","user":"U035BQEGZ","text":"something
+        something <#C02AZBZ81>","ts":"1456958103.000526"},{"type":"message","user":"U02Q25H6V","text":"<@U0B38JAFQ>:
+        Please do not use at channel in this channel, <#C043MPFNX> would be a more
+        appropriate venue","ts":"1456958067.000524"},{"user":"U02Q2FPBZ","type":"message","subtype":"channel_leave","text":"<@U02Q2FPBZ|orion>
         has left the channel","ts":"1456932968.000522"},{"type":"message","user":"U02D2TTKD","text":"<!channel>
         Still looking for 3-5 more student-led electives for this Friday. DM me if
         you''re interested. ","ts":"1456930505.000521"},{"type":"message","user":"U0DCH2M9A","text":"^^^^
@@ -81,7 +99,7 @@ http_interactions:
         owner of this bag which is the culprit of the dead body smell has until the
         end of lunch then this is getting thrown away.  sitting on top of the cabinet
         by the trash cans","edited":{"user":"U04UEBSJK","ts":"1456860507.000000"},"ts":"1456860492.000504","reactions":[{"name":"fire","users":["U0HRSRB0V","U09UB1KFY"],"count":2}]},{"type":"message","subtype":"file_share","text":"<@U04UEBSJK|this_just_in>
-        uploaded a file: <https:\/\/turingschool.slack.com\/files\/this_just_in\/F0PP9DX88\/wp_20160301_12_10_19_pro.jpg|WP&lowbar;20160301&lowbar;12&lowbar;10&lowbar;19&lowbar;Pro.jpg>","file":{"id":"F0PP9DX88","created":1456860478,"timestamp":1456860478,"name":"WP_20160301_12_10_19_Pro.jpg","title":"WP_20160301_12_10_19_Pro.jpg","mimetype":"image\/jpeg","filetype":"jpg","pretty_type":"JPEG","user":"U04UEBSJK","editable":false,"size":359069,"mode":"hosted","is_external":false,"external_type":"","is_public":true,"public_url_shared":false,"display_as_bot":false,"username":"","url_private":"https:\/\/files.slack.com\/files-pri\/T029P2S9M-F0PP9DX88\/wp_20160301_12_10_19_pro.jpg","url_private_download":"https:\/\/files.slack.com\/files-pri\/T029P2S9M-F0PP9DX88\/download\/wp_20160301_12_10_19_pro.jpg","thumb_64":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PP9DX88-6e98b5fbec\/wp_20160301_12_10_19_pro_64.jpg","thumb_80":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PP9DX88-6e98b5fbec\/wp_20160301_12_10_19_pro_80.jpg","thumb_360":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PP9DX88-6e98b5fbec\/wp_20160301_12_10_19_pro_360.jpg","thumb_360_w":203,"thumb_360_h":360,"thumb_480":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PP9DX88-6e98b5fbec\/wp_20160301_12_10_19_pro_480.jpg","thumb_480_w":270,"thumb_480_h":480,"thumb_160":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PP9DX88-6e98b5fbec\/wp_20160301_12_10_19_pro_160.jpg","thumb_720":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PP9DX88-6e98b5fbec\/wp_20160301_12_10_19_pro_720.jpg","thumb_720_w":405,"thumb_720_h":720,"thumb_960":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PP9DX88-6e98b5fbec\/wp_20160301_12_10_19_pro_960.jpg","thumb_960_w":540,"thumb_960_h":960,"thumb_1024":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PP9DX88-6e98b5fbec\/wp_20160301_12_10_19_pro_1024.jpg","thumb_1024_w":576,"thumb_1024_h":1024,"image_exif_rotation":1,"original_w":1632,"original_h":918,"permalink":"https:\/\/turingschool.slack.com\/files\/this_just_in\/F0PP9DX88\/wp_20160301_12_10_19_pro.jpg","permalink_public":"https:\/\/slack-files.com\/T029P2S9M-F0PP9DX88-c41d4bd1db","channels":["C03HS2LS0"],"groups":[],"ims":[],"comments_count":0},"user":"U04UEBSJK","upload":true,"display_as_bot":false,"username":"<@U04UEBSJK|this_just_in>","bot_id":null,"ts":"1456860489.000503"},{"type":"message","user":"U04T2GBH6","text":"#MakeTuringGreatAgain","ts":"1456859609.000500"},{"type":"message","user":"U04UEBSJK","text":"If
+        uploaded a file: <https:\/\/turingschool.slack.com\/files\/this_just_in\/F0PP9DX88\/wp_20160301_12_10_19_pro.jpg|WP_20160301_12_10_19_Pro.jpg>","file":{"id":"F0PP9DX88","created":1456860478,"timestamp":1456860478,"name":"WP_20160301_12_10_19_Pro.jpg","title":"WP_20160301_12_10_19_Pro.jpg","mimetype":"image\/jpeg","filetype":"jpg","pretty_type":"JPEG","user":"U04UEBSJK","editable":false,"size":359069,"mode":"hosted","is_external":false,"external_type":"","is_public":true,"public_url_shared":false,"display_as_bot":false,"username":"","url_private":"https:\/\/files.slack.com\/files-pri\/T029P2S9M-F0PP9DX88\/wp_20160301_12_10_19_pro.jpg","url_private_download":"https:\/\/files.slack.com\/files-pri\/T029P2S9M-F0PP9DX88\/download\/wp_20160301_12_10_19_pro.jpg","thumb_64":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PP9DX88-6e98b5fbec\/wp_20160301_12_10_19_pro_64.jpg","thumb_80":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PP9DX88-6e98b5fbec\/wp_20160301_12_10_19_pro_80.jpg","thumb_360":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PP9DX88-6e98b5fbec\/wp_20160301_12_10_19_pro_360.jpg","thumb_360_w":203,"thumb_360_h":360,"thumb_480":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PP9DX88-6e98b5fbec\/wp_20160301_12_10_19_pro_480.jpg","thumb_480_w":270,"thumb_480_h":480,"thumb_160":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PP9DX88-6e98b5fbec\/wp_20160301_12_10_19_pro_160.jpg","thumb_720":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PP9DX88-6e98b5fbec\/wp_20160301_12_10_19_pro_720.jpg","thumb_720_w":405,"thumb_720_h":720,"thumb_960":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PP9DX88-6e98b5fbec\/wp_20160301_12_10_19_pro_960.jpg","thumb_960_w":540,"thumb_960_h":960,"thumb_1024":"https:\/\/files.slack.com\/files-tmb\/T029P2S9M-F0PP9DX88-6e98b5fbec\/wp_20160301_12_10_19_pro_1024.jpg","thumb_1024_w":576,"thumb_1024_h":1024,"image_exif_rotation":1,"original_w":1632,"original_h":918,"permalink":"https:\/\/turingschool.slack.com\/files\/this_just_in\/F0PP9DX88\/wp_20160301_12_10_19_pro.jpg","permalink_public":"https:\/\/slack-files.com\/T029P2S9M-F0PP9DX88-c41d4bd1db","channels":["C03HS2LS0"],"groups":[],"ims":[],"comments_count":0},"user":"U04UEBSJK","upload":true,"display_as_bot":false,"username":"<@U04UEBSJK|this_just_in>","bot_id":null,"ts":"1456860489.000503"},{"type":"message","user":"U04T2GBH6","text":"#MakeTuringGreatAgain","ts":"1456859609.000500"},{"type":"message","user":"U04UEBSJK","text":"If
         you have food in the main fridge\u2026\u2026..come get it and put it back
         into the fridge.  I\u2019m leaving anything out that may be the culprit of
         the nasty smell on the table.","ts":"1456859583.000499"},{"type":"message","user":"U04UEBSJK","text":"<@U0E9ZQ6VB>:
@@ -221,20 +239,7 @@ http_interactions:
         Please share any feedback you have on the Gear Up today here: <http:\/\/goo.gl\/forms\/hCkgHFEpTt>","ts":"1456510863.000405","reactions":[{"name":"best-sebian","users":["U0DCH2M9A","U0DK1AD28","U07QF5JHG","U0C4JP8K1"],"count":4}]},{"type":"message","user":"U04T2GBH6","text":"Shoutout
         to <@U09UKK56W> for leading the charge on this gear up. One of the most interesting
         sessions I''ve been apart of ","ts":"1456509894.000404","reactions":[{"name":"tada","users":["U0E5GRGF8","U07QF5JHG","U07QJH78T","U0C6CG4RL","U07R80TCL","U096YTZN1","U0HRSRB0V","U07QFRB19","U02MYKGQB","U02D2TTKD"],"count":10},{"name":"upvote","users":["U0C6CG4RL","U0DK1AD28","U0DCP9P7T","U07R80TCL","U0HRSRB0V","U07QFF1T5","U0BER821K","U02D2TTKD"],"count":8},{"name":"trump","users":["U09U64HQQ","U0HRSRB0V"],"count":2},{"name":"best-sebian","users":["U0DCH2M9A","U0DK1AD28"],"count":2}]},{"user":"U044N088N","type":"message","subtype":"channel_leave","text":"<@U044N088N|sally>
-        has left the channel","ts":"1456509683.000403"},{"type":"message","user":"U0C6CG4RL","text":"<!here|@here>
-        Please start heading to the Big Workspace to hear our guest speaker, Rick
-        Newman! Thanks!","ts":"1456509652.000402"},{"type":"message","user":"U02D2TTKD","text":"<!channel>
-        Gear Up time! Check <http:\/\/today.turing.io|today.turing.io> and head to
-        your assigned area.","ts":"1456506377.000401"},{"user":"U06TNKJFL","type":"message","subtype":"channel_leave","text":"<@U06TNKJFL|rose>
-        has left the channel","ts":"1456503071.000400"},{"type":"message","user":"U0C6CG4RL","text":"<!here|@here>
-        Here are the Student Advisory Board notes from yesterday: <https:\/\/docs.google.com\/document\/d\/1dwnht4LpWaKL__eghEw0aZIoRlCronQLC96cgrTILyo\/edit?usp=sharing>
-        Look them over for anything you want to talk about at Group Retro","ts":"1456502222.000399"},{"type":"message","user":"U096YTZN1","text":"Probably
-        won''t arrive until the early afternoon ","ts":"1456499437.000398","reactions":[{"name":"cry","users":["U07PWEAN9","U0JRVSSAC","U0DCH2M9A","U09CU0V7U"],"count":4}]},{"type":"message","user":"U096YTZN1","text":"<@U0E5GRGF8>:
-        from yesterday - <!here> so more coffee will be delivered tomorrow. If you''re
-        a coffee drinker and notice our supply is low, please help me out and let
-        me know so I can have more ready before we run out. Thanks! ","ts":"1456499413.000397"},{"type":"message","user":"U0E5GRGF8","text":"<@U096YTZN1>:
-        coffeee???","ts":"1456499250.000396"},{"user":"U03JJ9VQ5","type":"message","subtype":"channel_leave","text":"<@U03JJ9VQ5|michaelm>
-        has left the channel","ts":"1456499038.000395"}],"has_more":true}'
+        has left the channel","ts":"1456509683.000403"}],"has_more":true}'
     http_version: 
-  recorded_at: Wed, 02 Mar 2016 19:13:33 GMT
+  recorded_at: Mon, 07 Mar 2016 02:28:59 GMT
 recorded_with: VCR 3.0.1

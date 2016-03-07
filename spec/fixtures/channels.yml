@@ -3,3 +3,15 @@ first:
   name: turing
   team_id: 1
   slack_id: C03HS2LS0
+
+second:
+  id: 2
+  name: '1510'
+  team_id: 1
+  slack_id: C09D6KWR3
+
+second:
+  id: 4
+  name: watercooler
+  team_id: 1
+  slack_id: C02AZBZ81

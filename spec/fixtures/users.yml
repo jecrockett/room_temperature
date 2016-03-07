@@ -3,4 +3,11 @@ first:
   u_id: U0AB3N750
   team_id: 1
   nickname: crockett
-  token: xoxp-2329094327-10377755170-23775525907-73891740df
+  token: xoxp-2329094327-10377755170-24063830484-042e3cc287
+
+second:
+  id: 2
+  u_id: U0C4JP8K1
+  team_id: 1
+  nickname: tmoore
+  token: xoxp-2329094327-12154790647-24781126230-619e23b656
