@@ -10,7 +10,7 @@ class GraphManager
   def channel_data
     if channel.nil? || channel.empty?
       nil
-    elsif user.empty?
+    elsif user.empty? || user.nil?
       complete_channel_data
     else
       partial_channel_data
@@ -18,19 +18,20 @@ class GraphManager
   end
 
   def complete_channel_data
-    Rails.cache.fetch("channel_#{channel}-complete-#{Sentiment.where(channel_id: channel).last.slack_id}") do
+    Rails.cache.fetch("#{range}-channel_#{channel}-complete-#{Sentiment.where(channel_id: channel).last.slack_id}") do
       scoped_sentiments.where(channel_id: channel).pluck(:slack_id, :score)
     end
   end
 
   def partial_channel_data
-    Rails.cache.fetch("channel_#{channel}-partial-#{Sentiment.where(channel_id: channel).last.slack_id}") do
+    Rails.cache.fetch("#{range}-channel_#{channel}-user_#{user}-partial-#{Sentiment.where(channel_id: channel).last.slack_id}") do
       scoped_sentiments.where(channel_id: channel).where.not(user_id: user).pluck(:slack_id, :score)
     end
   end
 
   def user_data
-    Rails.cache.fetch("user_#{user}-channel_#{channel}-#{Sentiment.where(channel_id: channel).last.slack_id}") do
+    return nil if channel.nil? || channel.empty? || user.nil? || user.empty?
+    Rails.cache.fetch("#{range}-user_#{user}-channel_#{channel}-#{Sentiment.where(channel_id: channel).last.slack_id}") do
       scoped_sentiments.where(channel_id: channel, user_id: user).pluck(:slack_id, :score)
     end
   end

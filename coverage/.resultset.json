@@ -38,14 +38,21 @@
         null,
         1,
         4,
+        0,
+        null,
         null,
         null,
         1,
         1,
+        0,
+        null,
         null,
         null,
         1,
         2,
+        0,
+        0,
+        null,
         null,
         null,
         1,
@@ -67,9 +74,9 @@
         null,
         null,
         1,
-        7,
-        6,
-        2,
+        0,
+        0,
+        0,
         null,
         null
       ],
@@ -87,9 +94,16 @@
         1,
         1,
         null,
+        1,
+        0,
+        null,
         null,
         1,
-        4,
+        0,
+        null,
+        null,
+        1,
+        0,
         null,
         null
       ],
@@ -148,6 +162,7 @@
       ],
       "/Users/JEC/Turing/3Module/projects/slack_mood/room_temperature/app/controllers/home_controller.rb": [
         1,
+        1,
         null,
         1,
         4,
@@ -156,6 +171,8 @@
         null
       ],
       "/Users/JEC/Turing/3Module/projects/slack_mood/room_temperature/app/controllers/application_controller.rb": [
+        1,
+        1,
         1,
         null,
         null,
@@ -205,6 +222,6 @@
         null
       ]
     },
-    "timestamp": 1457319873
+    "timestamp": 1457380741
   }
 }
