@@ -14,6 +14,7 @@ gem 'faraday'
 gem 'indico'
 gem 'chartkick'
 gem 'groupdate'
+gem 'actionpack-page_caching'
 
 
 group :development, :test do

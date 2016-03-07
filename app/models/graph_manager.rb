@@ -18,15 +18,21 @@ class GraphManager
   end
 
   def complete_channel_data
-    scoped_sentiments.where(channel_id: channel).pluck(:slack_id, :score)
+    Rails.cache.fetch("channel_#{channel}-complete-#{Sentiment.where(channel_id: channel).last.slack_id}") do
+      scoped_sentiments.where(channel_id: channel).pluck(:slack_id, :score)
+    end
   end
 
   def partial_channel_data
-    scoped_sentiments.where(channel_id: channel).where.not(user_id: user).pluck(:slack_id, :score)
+    Rails.cache.fetch("channel_#{channel}-partial-#{Sentiment.where(channel_id: channel).last.slack_id}") do
+      scoped_sentiments.where(channel_id: channel).where.not(user_id: user).pluck(:slack_id, :score)
+    end
   end
 
   def user_data
-    scoped_sentiments.where(channel_id: channel, user_id: user).pluck(:slack_id, :score)
+    Rails.cache.fetch("user_#{user}-channel_#{channel}-#{Sentiment.where(channel_id: channel).last.slack_id}") do
+      scoped_sentiments.where(channel_id: channel, user_id: user).pluck(:slack_id, :score)
+    end
   end
 
   def chart_title
