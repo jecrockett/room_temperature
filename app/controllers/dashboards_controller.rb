@@ -1,4 +1,5 @@
 class DashboardsController < ApplicationController
+  before_action :authorize!, only: [:show]
 
   def show
     gm = GraphManager.new(params[:channel], params[:user], params[:range])

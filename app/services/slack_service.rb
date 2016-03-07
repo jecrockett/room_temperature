@@ -18,17 +18,4 @@ class SlackService
     parsed_response = JSON.parse(response.body)
     parsed_response['messages'].to_a
   end
-
-  def pull_new_groups(group, token)
-    response = conn.get do |req|
-      req.url '/api/groups.history'
-      req.params['channel'] = group
-      req.params['token'] = token
-      req.params['oldest'] = Sentiment.where(channel_id: group).last.slack_id if Sentiment.where(channel_id: group).last
-    end
-    binding.pry
-    parsed_response = JSON.parse(response.body)
-    parsed_response['messages'].to_a
-  end
-
 end
