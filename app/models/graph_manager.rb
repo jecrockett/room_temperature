@@ -1,45 +1,40 @@
 class GraphManager
-  attr_reader :channel, :user, :range
+  attr_reader :channel_id, :user_id, :range
 
-  def initialize(channel, user, range)
-    @channel = channel
-    @user = user
+  def initialize(channel_id, user_id, range)
+    @channel_id = channel_id
+    @user_id = user_id
     @range = range
   end
 
   def channel_data
-    if channel.nil? || channel.empty?
-      nil
-    elsif user.empty? || user.nil?
-      complete_channel_data
-    else
-      partial_channel_data
-    end
+    return nil if channel_id.blank?
+    user_id.blank? ? complete_channel_data : partial_channel_data
   end
 
   def complete_channel_data
-    Rails.cache.fetch("#{range}-channel_#{channel}-complete-#{Sentiment.where(channel_id: channel).last.slack_id}") do
-      scoped_sentiments.where(channel_id: channel).pluck(:slack_id, :score)
+    Rails.cache.fetch("#{range}-channel_#{channel_id}-complete-#{Sentiment.where(channel_id: channel_id).last.slack_id}") do
+      scoped_sentiments.where(channel_id: channel_id).pluck(:slack_id, :score)
     end
   end
 
   def partial_channel_data
-    Rails.cache.fetch("#{range}-channel_#{channel}-user_#{user}-partial-#{Sentiment.where(channel_id: channel).last.slack_id}") do
-      scoped_sentiments.where(channel_id: channel).where.not(user_id: user).pluck(:slack_id, :score)
+    Rails.cache.fetch("#{range}-channel_#{channel_id}-user_#{user_id}-partial-#{Sentiment.where(channel_id: channel_id).last.slack_id}") do
+      scoped_sentiments.where(channel_id: channel_id).where.not(user_id: user_id).pluck(:slack_id, :score)
     end
   end
 
   def user_data
-    return nil if channel.nil? || channel.empty? || user.nil? || user.empty?
-    Rails.cache.fetch("#{range}-user_#{user}-channel_#{channel}-#{Sentiment.where(channel_id: channel).last.slack_id}") do
-      scoped_sentiments.where(channel_id: channel, user_id: user).pluck(:slack_id, :score)
+    return nil if channel_id.blank? || user_id.blank?
+    Rails.cache.fetch("#{range}-user_#{user_id}-channel_#{channel_id}-#{Sentiment.where(channel_id: channel_id).last.slack_id}") do
+      scoped_sentiments.where(channel_id: channel_id, user_id: user_id).pluck(:slack_id, :score)
     end
   end
 
   def chart_title
-    if channel.nil? || channel.empty?
+    if channel_id.blank?
       "Please select a channel from the dropdown menu."
-    elsif user.empty?
+    elsif user_id.empty?
       "#{range} Sentiments in #{channel_name}"
     else
       "#{range} Sentiments in #{channel_name} -- Highlighting: #{user_name}"
@@ -47,11 +42,11 @@ class GraphManager
   end
 
   def channel_name
-    Channel.find(channel).name
+    Channel.find(channel_id).name
   end
 
   def user_name
-    User.find(user).nickname
+    User.find(user_id).nickname
   end
 
   def scoped_sentiments
