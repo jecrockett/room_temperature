@@ -1,0 +1,14 @@
+<div class="channels-wrapper">
+  <h2>Channel Options</h2>
+
+  <div class="edit-channels-link">
+    <%= link_to "Add Channels To Track", new_channel_path %>
+  </div>
+
+  <div class="tracked-channels">
+    <h4>Tracked Channels</h4>
+    <% @tracked_channels.each do |channel| %>
+      <p><%= channel.name %></p>
+    <% end %>
+  </div>
+</div>
