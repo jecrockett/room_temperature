@@ -35,10 +35,17 @@ class GraphManager
     if channel_id.blank?
       "Please select a channel from the dropdown menu."
     elsif user_id.empty?
-      "#{range} Sentiments in #{channel_name}"
+      "Sentiments #{chart_range} in #{channel_name}"
     else
-      "#{range} Sentiments in #{channel_name} -- Highlighting: #{user_name}"
+      "Sentiments #{chart_range} in #{channel_name} -- Highlighting: #{user_name}"
     end
+  end
+
+  def chart_range
+    return "This Week" if range == "week"
+    return "Today" if range == 0
+    return "Yesterday" if range == 1
+    "#{range} Days Ago"
   end
 
   def channel_name
@@ -50,8 +57,24 @@ class GraphManager
   end
 
   def scoped_sentiments
-    return Sentiment.weekly  if range == "Weekly"
-    return Sentiment.daily   if range == "Daily"
-    Sentiment.all
+    range == "week" ? Sentiment.weekly : Sentiment.daily(range)
+  end
+
+  def find_endpoints(ch_data, u_data)
+    nil unless ch_data.present?
+    if u_data.blank?
+      data = ch_data
+    else
+      data = ch_data + u_data
+    end
+    return nil if data.nil?
+    min = data.map { |a| a[0] }.min
+    max = data.map { |a| a[0] }.max
+    convert_to_dates([min.to_i, max.to_i])
+  end
+
+  def convert_to_dates(array)
+    [Time.at(array[0]).to_s[5..-7],
+     Time.at(array[1]).to_s[5..-7]]
   end
 end

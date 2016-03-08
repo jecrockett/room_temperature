@@ -15,8 +15,12 @@ class Sentiment < ActiveRecord::Base
     where("created_at > ?", Time.now-7.days )
   end
 
-  def self.daily
-    where("created_at > ?", Time.now-1.days )
+  # def self.daily(day)
+  #   where("created_at > ?", Time.now-1.days )
+  # end
+
+  def self.daily(day)
+    where(created_at: day.to_i.days.ago.beginning_of_day..day.to_i.days.ago.end_of_day)
   end
 
   def clear_cache

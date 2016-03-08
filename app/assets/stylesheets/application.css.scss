@@ -86,7 +86,8 @@ nav {
 
 .dashboard-wrapper {
   h2 {
-    padding-top: 30px;
+    padding-top: 0px;
+    margin-bottom: 0;
     text-align: center;
   }
   .filters {
@@ -105,16 +106,44 @@ nav {
       }
     }
   }
-  #chart {
-    z-index: 1;
-    h3 {
-      z-index: 100;
-    }
-  }
 }
 
 .select-wrapper input.select-dropdown {
   width: 250px;
+}
+
+#chart {
+  h4 {
+    margin: 0;
+    padding-bottom: 5px;
+  }
+  .yaxis {
+    font-size: 18px;
+    background-color: white;
+    z-index: 1;
+    height: 265px;
+    width: 60px;
+    position: absolute;
+    top: 380px;
+    left: 290px;
+    .space {
+      padding-bottom: 100px;
+    }
+  }
+  .xaxis {
+    font-size: 18px;
+    background-color: white;
+    z-index: 1;
+    position: absolute;
+    bottom: 90px;
+    left: 300px;
+    width: 820px;
+    padding-left: 130px;
+    .space {
+      padding-right: 300px;
+    }
+  }
+
 }
 
 

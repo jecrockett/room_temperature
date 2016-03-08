@@ -1,9 +1,14 @@
 desc "TODO"
 task pull_channels: [:environment] do
+
+  # clean sentiments more than a week old
+  Sentiment.all.each { |s| s.delete if s.slack_id.to_i < 7.days.ago.to_i}
+
   slack = SlackService.new
   Indico.api_key = ENV['INDICO_KEY']
   channels = Channel.all
 
+  # call to slack for each channel
   channels.each do |channel|
     response = slack.pull_new_channels(channel, ENV['SLACK_TOKEN'])
 
@@ -12,6 +17,7 @@ task pull_channels: [:environment] do
       next
     end
 
+    # grab text and send away for sentiment analysis
     messages = response.map { |msg_hash| msg_hash["text"] }
     sentiments = Indico.sentiment(messages)
 
@@ -20,6 +26,7 @@ task pull_channels: [:environment] do
     response.reverse!
     sentiments.reverse!
 
+    # create sentiments
     response.each_with_index do |info, index|
       s = Sentiment.create
       s.user_id = User.find_or_create_by(u_id: info['user']).id
