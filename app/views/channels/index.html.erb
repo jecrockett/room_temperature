@@ -8,7 +8,10 @@
   <div class="tracked-channels">
     <h4>Tracked Channels</h4>
     <% @tracked_channels.each do |channel| %>
-      <p><%= channel.name %></p>
+      <div>
+        <span><%= channel.name %></span>
+        <%= link_to "Delete", channel_path(channel.id), method: :delete %>
+      </div>
     <% end %>
   </div>
 </div>

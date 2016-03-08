@@ -21,6 +21,13 @@ class ChannelsController < ApplicationController
     end
   end
 
+  def destroy
+    channel = Channel.find(params[:id])
+    flash[:notice] = "You've deleted #{channel.name} and all of its sentiments."
+    channel.delete
+    redirect_to channels_path
+  end
+
   private
 
     def parse_channel_params

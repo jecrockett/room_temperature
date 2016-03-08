@@ -146,8 +146,11 @@ nav {
     h4 {
       margin-bottom: 10px;
     }
-    p {
-      padding: 10px 0;
+    div {
+      padding: 10px 0 0 30px;
+      a {
+        float: right;
+      }
     }
   }
 }
