@@ -1,7 +1,7 @@
 class ChannelsController < ApplicationController
 
   def index
-    @tracked_channels = Channel.all
+    @tracked_channels = current_user.team.channels
   end
 
   def new
@@ -48,7 +48,7 @@ class ChannelsController < ApplicationController
     end
 
     def already_tracking?(ch)
-      Channel.all.pluck(:slack_id).include?(ch['id'])
+      current_user.team.channels.pluck(:slack_id).include?(ch['id'])
     end
 
     def build_channel(info)

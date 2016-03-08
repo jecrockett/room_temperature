@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-03-07T20:00:04-07:00">2016-03-07T20:00:04-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-03-08T14:08:15-07:00">2016-03-08T14:08:15-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.92
+         0.94
        </span>
     </span> hits/line)
   </h2>
@@ -57,7 +57,7 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>2.6</td>
+        <td>3.0</td>
       </tr>
       
       <tr>
@@ -183,7 +183,7 @@
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.6
+         0.63
        </span>
     </span> hits/line)
   </h2>
@@ -215,7 +215,7 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>2.6</td>
+        <td>3.0</td>
       </tr>
       
       <tr>
@@ -633,8 +633,8 @@
           <code class="ruby">  def current_user</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="10">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="17" data-linenumber="10">
+          <span class="hits">17</span>
           
           <code class="ruby">    @current_user ||= User.find(session[:user_id]) if session[:user_id]</code>
         </li>
@@ -714,7 +714,7 @@
         <li class="missed" data-hits="0" data-linenumber="4">
           
           
-          <code class="ruby">    @tracked_channels = Channel.all</code>
+          <code class="ruby">    @tracked_channels = current_user.team.channels</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="5">
@@ -996,7 +996,7 @@
         <li class="missed" data-hits="0" data-linenumber="51">
           
           
-          <code class="ruby">      Channel.all.pluck(:slack_id).include?(ch[&#39;id&#39;])</code>
+          <code class="ruby">      current_user.team.channels.pluck(:slack_id).include?(ch[&#39;id&#39;])</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="52">

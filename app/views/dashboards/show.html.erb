@@ -6,13 +6,13 @@
     <%= form_tag(dashboard_path) do %>
       <div class="field">
         <div class="input-field">
-          <%= select_tag(:channel, options_from_collection_for_select(Channel.all, "id", "name"), include_blank: true) %>
+          <%= select_tag(:channel, options_from_collection_for_select(current_user.team.channels, "id", "name"), include_blank: true) %>
           <%= label_tag 'channel', 'Select a Channel (required):' %>
         </div>
       </div>
       <div class="field">
         <div class="input-field">
-          <%= select_tag(:user, options_from_collection_for_select(User.where.not(nickname: nil), "id", "nickname"), include_blank: true) %>
+          <%= select_tag(:user, options_from_collection_for_select(current_user.team.users.where.not(nickname: nil), "id", "nickname"), include_blank: true) %>
           <%= label_tag 'user', 'Filter by User (optional):' %>
         </div>
       </div>
