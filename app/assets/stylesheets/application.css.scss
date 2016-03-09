@@ -89,10 +89,15 @@ nav {
     padding-top: 0px;
     margin-bottom: 0;
     text-align: center;
+    z-index: 1;
+  }
+  h4 {
+    margin: 0;
+    padding-top: 20px;
   }
   .filters {
-    height: 150px;
-    padding-top: 40px;
+    height: 85px;
+    padding-top: 10px;
     text-align: center;
     .field {
       width: 250px;
@@ -113,19 +118,15 @@ nav {
 }
 
 #chart {
-  h4 {
-    margin: 0;
-    padding-bottom: 5px;
-  }
   .yaxis {
     font-size: 18px;
     background-color: white;
     z-index: 1;
-    height: 265px;
+    height: 275px;
     width: 60px;
     position: absolute;
-    top: 380px;
-    left: 290px;
+    top: 335px;
+    left: 265px;
     .space {
       padding-bottom: 100px;
     }
@@ -135,12 +136,12 @@ nav {
     background-color: white;
     z-index: 1;
     position: absolute;
-    bottom: 90px;
+    bottom: 65px;
     left: 300px;
     width: 820px;
-    padding-left: 130px;
+    padding-left: 35px;
     .space {
-      padding-right: 300px;
+      padding-right: 330px;
     }
   }
 
