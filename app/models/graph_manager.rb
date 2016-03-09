@@ -37,7 +37,7 @@ class GraphManager
     elsif user_id.empty?
       "Sentiments #{chart_range} in #{channel_name}"
     else
-      "Sentiments #{chart_range} in #{channel_name}"
+      "Sentiments #{chart_range} in #{channel_name} -- Highlighting: #{user_name}"
     end
   end
 
