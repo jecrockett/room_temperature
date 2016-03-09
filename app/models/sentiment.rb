@@ -16,8 +16,8 @@ class Sentiment < ActiveRecord::Base
   end
 
   def self.daily(day)
-    day = Time.now - day.to_i.days
-    where(timestamp: (day.beginning_of_day..day.end_of_day))
+    binding.pry
+    where(timestamp: ((Time.now - day.to_i.days).beginning_of_day..(Time.now - day.to_i.days).end_of_day))
   end
 
   def clear_cache

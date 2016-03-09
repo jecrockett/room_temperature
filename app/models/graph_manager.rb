@@ -57,7 +57,11 @@ class GraphManager
   end
 
   def scoped_sentiments
-    range == "week" ? Sentiment.weekly : Sentiment.daily(range)
+    if range == "week"
+      Sentiment.weekly
+    else
+      Sentiment.daily(range)
+    end
   end
 
   def compile_dataset(channel_data, user_data)

@@ -14,9 +14,9 @@ second:
   channel_id: 1
   slack_id: "1456509894.000404"
   score: 0.73349212027112
-  created_at: <%= Time.now - 2.days %>
-  updated_at: <%= Time.now - 2.days %>
-  timestamp: <%= Time.now - 2.days %>
+  created_at: <%= Time.now - 4.days %>
+  updated_at: <%= Time.now - 4.days %>
+  timestamp: <%= Time.now - 4.days %>
 
 third:
   user_id: 2
@@ -54,6 +54,6 @@ sixth:
   channel_id: 2
   slack_id: "1456509894.000404"
   score: 0.93349212027112
-  created_at: <%= Time.now - 10.hours %>
-  updated_at: <%= Time.now - 10.hours %>
-  timestamp: <%= Time.now - 10.hours %>
+  created_at: <%= Time.now - 4.days %>
+  updated_at: <%= Time.now - 4.days %>
+  timestamp: <%= Time.now - 4.days %>
