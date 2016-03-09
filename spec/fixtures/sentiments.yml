@@ -24,9 +24,9 @@ third:
   channel_id: 1
   slack_id: "1456509894.000404"
   score: 0.73349212027112
-  created_at: <%= Time.now - 1.day %>
-  updated_at: <%= Time.now - 1.day %>
-  timestamp: <%= Time.now - 1.day %>
+  created_at: <%= Time.now.yesterday %>
+  updated_at: <%= Time.now.yesterday %>
+  timestamp: <%= Time.now.yesterday %>
 
 fourth:
   user_id: 1

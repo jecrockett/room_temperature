@@ -43,8 +43,8 @@ class GraphManager
 
   def chart_range
     return "This Week" if range == "week"
-    return "Today" if range == 0
-    return "Yesterday" if range == 1
+    return "Today" if range == "0"
+    return "Yesterday" if range == "1"
     "#{range} Days Ago"
   end
 
@@ -60,21 +60,25 @@ class GraphManager
     range == "week" ? Sentiment.weekly : Sentiment.daily(range)
   end
 
-  def find_endpoints(ch_data, u_data)
-    return nil unless ch_data.present?
-    if u_data.blank?
-      data = ch_data
+  def compile_dataset(channel_data, user_data)
+    if user_data.blank?
+      channel_data
     else
-      data = ch_data + u_data
+      channel_data + user_data
     end
-    return nil if data.nil?
-    min = data.map { |a| a[0] }.min
-    max = data.map { |a| a[0] }.max
-    convert_to_dates([min.to_i, max.to_i])
   end
 
-  def convert_to_dates(array)
-    [Time.at(array[0]).to_s[5..-7],
-     Time.at(array[1]).to_s[5..-7]]
+  def find_endpoints(ch_data, u_data)
+    data = compile_dataset(ch_data, u_data)
+    return nil if data.blank?
+
+    min = data.map { |a| a[0] }.min
+    max = data.map { |a| a[0] }.max
+    convert_to_dates(min.to_i, max.to_i)
+  end
+
+  def convert_to_dates(min, max)
+    [Time.at(min).to_s[5..-7],
+     Time.at(max).to_s[5..-7]]
   end
 end

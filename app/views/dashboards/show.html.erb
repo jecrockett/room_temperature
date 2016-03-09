@@ -18,7 +18,7 @@
       </div>
       <div class="field">
         <div class="input-field">
-          <%= select_tag(:range, options_for_select([["Past Week", "week"], ["Today", 0], ["1 Day Ago", 1], ["2 Days Ago", 2], ["3 Days Ago", 3], ["4 Days Ago", 4], ["5 Days Ago", 5], ["6 Days Ago", 6]])) %>
+          <%= select_tag(:range, options_for_select([["Past Week", "week"], ["Today", 0], ["Yesterday", 1], ["2 Days Ago", 2], ["3 Days Ago", 3], ["4 Days Ago", 4], ["5 Days Ago", 5], ["6 Days Ago", 6]])) %>
           <%= label_tag 'user', 'Choose a time range (required):' %>
         </div>
       </div>
