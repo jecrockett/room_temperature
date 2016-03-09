@@ -119,27 +119,29 @@ nav {
 
 #chart {
   .yaxis {
-    font-size: 18px;
+    font-size: 17px;
     background-color: white;
     z-index: 1;
-    height: 275px;
-    width: 60px;
-    position: absolute;
-    top: 335px;
-    left: 265px;
+    height: 270px;
+    width: 65px;
+    position: relative;
+    bottom: 335px;
+    left: 80px;
+    padding-top: 20px;
     .space {
-      padding-bottom: 100px;
+      padding-bottom: 90px;
     }
   }
   .xaxis {
-    font-size: 18px;
+    font-size: 17px;
     background-color: white;
     z-index: 1;
-    position: absolute;
-    bottom: 65px;
-    left: 300px;
+    height: 30px;
+    position: relative;
+    bottom: 340px;
+    left: 90px;
     width: 820px;
-    padding-left: 35px;
+    padding-left: 60px;
     .space {
       padding-right: 330px;
     }
