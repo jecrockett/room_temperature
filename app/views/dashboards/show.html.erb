@@ -35,9 +35,9 @@
         <%= scatter_chart [
           {name: "Channel", data: @channel_data},
           {name: "Selected User", data: @user_data}],
-        colors: ['blue', 'red'], min: 0, max: 1, width: "100%", height: "380px", xtitle: "Time Range", ytitle: 'Sentiment Score' %>
+        colors: ['#32a4d0', '#d45842'], min: 0, max: 1, width: "100%", height: "380px", xtitle: "Time Range", ytitle: 'Sentiment Score' %>
       <% else %>
-        <%= scatter_chart @channel_data, min: 0, max: 1, width: "100%", height: "400px", xtitle: "Time Range", ytitle: 'Sentiment Score' %>
+        <%= scatter_chart @channel_data, min: 0, max: 1, width: "100%", height: "400px", xtitle: "Time Range", ytitle: 'Sentiment Score', colors: ["#32a4d0"] %>
       <% end %>
       <div class="yaxis">
         <p class="space">
