@@ -10,8 +10,14 @@ second:
   team_id: 1
   slack_id: C09D6KWR3
 
-second:
-  id: 4
+third:
+  id: 3
   name: watercooler
   team_id: 1
   slack_id: C02AZBZ81
+
+other_team:
+  id: 4
+  name: 'crocketts'
+  team_id: 2
+  slack_id: C0HF9KLTV

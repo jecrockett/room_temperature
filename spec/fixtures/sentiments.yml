@@ -1,59 +1,76 @@
 first:
+  id: 1
   user_id: 1
   team_id: 1
   channel_id: 1
-  slack_id: "1456499038.000395"
+  slack_id: <%= (Time.now - 3.days).to_f %>
   score: 0.143132564466949
   created_at: <%= Time.now - 3.days %>
   updated_at: <%= Time.now - 3.days %>
   timestamp: <%= Time.now - 3.days %>
 
 second:
+  id: 2
   user_id: 2
   team_id: 1
   channel_id: 1
-  slack_id: "1456509894.000404"
+  slack_id: <%= (Time.now - 4.days).to_f %>
   score: 0.73349212027112
   created_at: <%= Time.now - 4.days %>
   updated_at: <%= Time.now - 4.days %>
   timestamp: <%= Time.now - 4.days %>
 
 third:
+  id: 3
   user_id: 2
   team_id: 1
   channel_id: 1
-  slack_id: "1456509894.000404"
+  slack_id: <%= Time.now.yesterday.to_f %>
   score: 0.73349212027112
   created_at: <%= Time.now.yesterday %>
   updated_at: <%= Time.now.yesterday %>
   timestamp: <%= Time.now.yesterday %>
 
 fourth:
+  id: 4
   user_id: 1
   team_id: 1
   channel_id: 1
-  slack_id: "1456509652.000402"
+  slack_id: <%= (Time.now - 10.hours).to_f %>
   score: 0.869755017562222
   created_at: <%= Time.now - 10.hours %>
   updated_at: <%= Time.now - 10.hours %>
   timestamp: <%= Time.now - 10.hours %>
 
 fifth:
+  id: 5
   user_id: 1
   team_id: 1
   channel_id: 2
-  slack_id: "1456509683.000403"
+  slack_id: <%= (Time.now - 10.hours).to_f %>
   score: 0.142804285386363
   created_at: <%= Time.now - 10.hours %>
   updated_at: <%= Time.now - 10.hours %>
   timestamp: <%= Time.now - 10.hours %>
 
 sixth:
+  id: 6
   user_id: 2
   team_id: 1
   channel_id: 2
-  slack_id: "1456509894.000404"
+  slack_id: <%= (Time.now - 4.days).to_f %>
   score: 0.93349212027112
   created_at: <%= Time.now - 4.days %>
   updated_at: <%= Time.now - 4.days %>
   timestamp: <%= Time.now - 4.days %>
+
+other_team:
+  id: 7
+  user_id: 3
+  team_id: 2
+  channel_id: 4
+  slack_id: "1456947814.49579"
+  score: 0.93349212027112
+  created_at: 2016-03-02 12:43:34 -0700
+  updated_at: 2016-03-02 12:43:34 -0700
+  timestamp: 016-03-02 12:43:34 -0700

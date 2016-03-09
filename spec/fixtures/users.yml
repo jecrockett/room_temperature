@@ -11,3 +11,10 @@ second:
   team_id: 1
   nickname: tmoore
   token: xoxp-2329094327-12154790647-24781126230-619e23b656
+
+other_team:
+  id: 3
+  u_id: U0HFC8ZHV
+  team_id: 2
+  nickname: jamie
+  token: xoxp-17522645190-17522305607-25376479744-86952ddda2

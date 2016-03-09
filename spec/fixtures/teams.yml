@@ -2,3 +2,8 @@ first:
   id: 1
   name: Turing
   slack_id: T029P2S9M
+
+second:
+  id: 2
+  name: The Crocketts
+  slack_id: T0HFCJZ5L
