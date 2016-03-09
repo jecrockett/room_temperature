@@ -50,12 +50,14 @@
       </p>
     </div>
     <div class="xaxis">
-      <span class="space">
-        <%= @x_axis_labels[0] %>
-      </span>
-      <span>
-        <%= @x_axis_labels[1] %>
-      </span>
+      <% if @x_axis_labels %>
+        <span class="space">
+          <%= @x_axis_labels[0] %>
+        </span>
+        <span>
+          <%= @x_axis_labels[1] %>
+        </span>
+      <% end %>
     </div>
   </div>
 </div>

@@ -12,7 +12,7 @@ class Sentiment < ActiveRecord::Base
   after_destroy :clear_cache
 
   def self.weekly
-    where("created_at > ?", Time.now-7.days )
+    where("timestamp > ?", Time.now-7.days )
   end
 
   # def self.daily(day)
@@ -20,7 +20,10 @@ class Sentiment < ActiveRecord::Base
   # end
 
   def self.daily(day)
-    where(created_at: day.to_i.days.ago.beginning_of_day..day.to_i.days.ago.end_of_day)
+    day = Time.now - day.to_i.days
+    binding.pry
+    where(timestamp: (day.beginning_of_day..day.end_of_day))
+    # where(timestamp: day.to_i.days.ago.beginning_of_day..day.to_i.days.ago.end_of_day)
   end
 
   def clear_cache

@@ -61,7 +61,7 @@ class GraphManager
   end
 
   def find_endpoints(ch_data, u_data)
-    nil unless ch_data.present?
+    return nil unless ch_data.present?
     if u_data.blank?
       data = ch_data
     else
