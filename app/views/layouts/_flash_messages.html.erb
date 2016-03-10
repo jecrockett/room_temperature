@@ -1,0 +1,11 @@
+<div class="flash-wrapper">
+  <% unless flash.empty? %>
+  <div class="flash-container">
+    <% flash.each do |type, msg| %>
+      <div class="flash-content">
+        <%= content_tag :span, sanitize(msg) %>
+      </div>
+    <% end %>
+  </div>
+  <% end %>
+</div>

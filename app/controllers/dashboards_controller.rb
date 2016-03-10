@@ -1,5 +1,5 @@
 class DashboardsController < ApplicationController
-  before_action :authorize!, only: [:show]
+  before_action :authorize!
 
   def show
     gm = GraphManager.new(params[:channel], params[:user], params[:range])
@@ -8,5 +8,4 @@ class DashboardsController < ApplicationController
     @chart_title = gm.chart_title
     @x_axis_labels = gm.find_endpoints(@channel_data, @user_data)
   end
-
 end

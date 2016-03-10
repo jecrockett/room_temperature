@@ -8,7 +8,7 @@ class GraphManager
   end
 
   def channel_data
-    return nil if channel_id.blank?
+    return nil if channel_id.blank? || Channel.find(channel_id).sentiments.blank?
     user_id.blank? ? complete_channel_data : partial_channel_data
   end
 
@@ -34,6 +34,8 @@ class GraphManager
   def chart_title
     if channel_id.blank?
       "Please select a channel from the dropdown menu."
+    elsif Channel.find(channel_id).sentiments.blank?
+      "We haven't received data for that channel yet."
     elsif user_id.empty?
       "Sentiments #{chart_range} in #{channel_name}"
     else

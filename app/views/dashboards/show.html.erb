@@ -1,65 +1,6 @@
 <%= javascript_include_tag "https://www.google.com/jsapi", "chartkick" %>
 <div class="dashboard-wrapper">
   <h2>Sentiment Dashboard</h2>
-
-  <div class="filters">
-    <%= form_tag(dashboard_path) do %>
-      <div class="field">
-        <div class="input-field">
-          <%= select_tag(:channel, options_from_collection_for_select(current_user.team.channels, "id", "name"), include_blank: true) %>
-          <%= label_tag 'channel', 'Select a Channel (required):' %>
-        </div>
-      </div>
-      <div class="field">
-        <div class="input-field">
-          <%= select_tag(:user, options_from_collection_for_select(current_user.team.users.where.not(nickname: nil), "id", "nickname"), include_blank: true) %>
-          <%= label_tag 'user', 'Filter by User (optional):' %>
-        </div>
-      </div>
-      <div class="field">
-        <div class="input-field">
-          <%= select_tag(:range, options_for_select([["Past Week", "week"], ["Today", 0], ["Yesterday", 1], ["2 Days Ago", 2], ["3 Days Ago", 3], ["4 Days Ago", 4], ["5 Days Ago", 5], ["6 Days Ago", 6]])) %>
-          <%= label_tag 'user', 'Choose a time range (required):' %>
-        </div>
-      </div>
-      <div class="field">
-        <%= submit_tag "F I L T E R", class: "submit-btn" %>
-      </div>
-    <% end %>
-  </div>
-
-  <div class="container">
-    <h4 class="center"><%= @chart_title %></h4>
-    <div id="chart">
-      <% if @user_data %>
-        <%= scatter_chart [
-          {name: "Channel", data: @channel_data},
-          {name: "Selected User", data: @user_data}],
-        colors: ['#32a4d0', '#d45842'], min: 0, max: 1, width: "100%", height: "380px", xtitle: "Time Range", ytitle: 'Sentiment Score' %>
-      <% else %>
-        <%= scatter_chart @channel_data, min: 0, max: 1, width: "100%", height: "400px", xtitle: "Time Range", ytitle: 'Sentiment Score', colors: ["#32a4d0"] %>
-      <% end %>
-      <div class="yaxis">
-        <p class="space">
-          Positive
-        </p>
-        <p class="space">
-          Neutral
-        </p>
-        <p>
-          Negative
-        </p>
-      </div>
-      <div class="xaxis">
-        <% if @x_axis_labels %>
-          <span class="space">
-            <%= @x_axis_labels[0] %>
-          </span>
-          <span>
-            <%= @x_axis_labels[1] %>
-          </span>
-        <% end %>
-      </div>
-    </div>
-  </div>
+  <%= render 'filters' %>
+  <%= render 'graph' %>
 </div>

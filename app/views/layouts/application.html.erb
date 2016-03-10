@@ -7,35 +7,15 @@
   <!-- Materialize CSS -->
   <%= stylesheet_link_tag   'materialize', media: 'all', 'data-turbolinks-track' => true %>
   <!-- CSS Style Reset -->
-  <%= stylesheet_link_tag    'css_reset', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag   'css_reset',   media: 'all', 'data-turbolinks-track' => true %>
   <!-- Custom CSS -->
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag   'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <!-- Nav Bar -->
-  <% if current_user %>
-    <nav>
-      <div class="nav-wrapper">
-        <%= link_to "Room Temperature", root_path, class: "brand-logo center" %>
-        <!-- <a href="#" class="brand-logo center">Room Temperature</a> -->
-        <ul id="nav-mobile" class="right">
-          <li><%= link_to "Channel Options", channels_path %></li>
-          <li><%= link_to "Data Dashboard", dashboard_path %></li>
-          <li><%= link_to "Logout", logout_path, method: :delete %></li>
-        </ul>
-      </div>
-    </nav>
-  <% end %>
-
-  <!-- Display Flash Messages -->
-  <% flash.each do |type, msg| %>
-    <%= content_tag :span, sanitize(msg) %>
-  <% end %>
-
-
-<%= yield %>
-
+  <%= render 'layouts/nav' %>
+  <%= render 'layouts/flash_messages' %>
+  <%= yield %>
   <!-- Materialize JavaScript -->
   <%= javascript_include_tag 'materialize', 'data-turbolinks-track' => true %>
   <!-- Application JavaScript -->

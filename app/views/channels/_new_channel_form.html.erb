@@ -1,0 +1,13 @@
+<div class="new-channel-form">
+  <%= form_tag(channels_path) do %>
+    <div class="field">
+      <div class="input-field">
+        <%= select_tag(:info, options_for_select(@untracked_channels), include_blank: true) %>
+        <%= label_tag 'channel', 'Select a Channel (required):' %>
+      </div>
+    </div>
+    <div class="field">
+      <%= submit_tag "T R A C K", class: "submit-btn" %>
+    </div>
+  <% end %>
+</div>

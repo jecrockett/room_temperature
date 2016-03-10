@@ -1,17 +1,7 @@
 <div class="channels-wrapper">
   <h2>Channel Options</h2>
-
   <div class="edit-channels-link">
     <%= link_to "Add Channels To Track", new_channel_path %>
   </div>
-
-  <div class="tracked-channels">
-    <h4>Tracked Channels</h4>
-    <% @tracked_channels.each do |channel| %>
-      <div>
-        <span><%= channel.name %></span>
-        <%= link_to "Delete", channel_path(channel.id), method: :delete %>
-      </div>
-    <% end %>
-  </div>
+  <%= render 'tracked_channels' %>
 </div>

@@ -38,6 +38,21 @@ h4 {
   font-size: 1.7em;
 }
 
+/* FLASH MESSAGES */
+.flash-wrapper {
+  margin: 0 auto;
+  width: 50%;
+  .flash-container {
+    border: 1px solid black;
+    border-radius:3px;
+    margin-top: 20px;
+  }
+  .flash-content {
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+  }
+}
 /* NAV */
 
 nav {
@@ -156,7 +171,6 @@ nav {
 .channels-wrapper {
   h2 {
     text-align: center;
-    padding-top: 30px;
   }
   .edit-channels-link {
     text-align: center;

@@ -1,4 +1,5 @@
 class ChannelsController < ApplicationController
+  before_action :authorize!
 
   def index
     @tracked_channels = current_user.team.channels
@@ -12,7 +13,8 @@ class ChannelsController < ApplicationController
     channel_info = parse_channel_params
     channel = build_channel(channel_info)
     if channel.save
-      flash[:notice] = "We'll start gathering data for #{channel.name}. Note: You will not see data for #{channel.name} appear right away."
+      flash[:notice] = "We'll start gathering data for #{channel.name}."
+      flash[:warning] = "Please Note: You will not see data for #{channel.name} appear right away."
       redirect_to channels_path
     else
       flash[:error] = "Something went wrong. Try your selection again."
@@ -24,7 +26,7 @@ class ChannelsController < ApplicationController
   def destroy
     channel = Channel.find(params[:id])
     flash[:notice] = "You've deleted #{channel.name} and all of its sentiments."
-    channel.delete
+    channel.destroy
     redirect_to channels_path
   end
 
@@ -58,5 +60,4 @@ class ChannelsController < ApplicationController
       c.team_id = current_user.team_id
       c
     end
-
 end
