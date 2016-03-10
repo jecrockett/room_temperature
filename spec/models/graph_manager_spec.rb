@@ -19,13 +19,14 @@ RSpec.describe GraphManager, type: :model do
   it "Returns today's channel data when requested" do
     gm = GraphManager.new("1", "", "0")
     data = gm.channel_data
-
+    binding.pry
     expect(data.count).to eq 1
   end
 
   it "Returns yesterday's's channel data when requested" do
     gm = GraphManager.new("1", "", "1")
     data = gm.channel_data
+    binding.pry
 
     expect(data.count).to eq 1
   end
@@ -201,7 +202,7 @@ RSpec.describe GraphManager, type: :model do
       latest = endpoints.last[0..4]
 
       expect(earliest).to eq (Time.now - 4.days).strftime('%m-%d')
-      expect(latest).to eq (Time.now - 10.hours).strftime('%m-%d')
+      expect(latest).to eq (Time.now).strftime('%m-%d')
     end
 
     it "returns min and max of combined data set when both channel and user data are sent in" do
@@ -214,7 +215,7 @@ RSpec.describe GraphManager, type: :model do
       latest = endpoints.last[0..4]
 
       expect(earliest).to eq (Time.now - 4.days).strftime('%m-%d')
-      expect(latest).to eq (Time.now - 10.hours).strftime('%m-%d')
+      expect(latest).to eq (Time.now).strftime('%m-%d')
     end
 
   end

@@ -36,22 +36,22 @@ fourth:
   user_id: 1
   team_id: 1
   channel_id: 1
-  slack_id: <%= (Time.now - 10.hours).to_f %>
+  slack_id: <%= (Time.now).to_f %>
   score: 0.869755017562222
-  created_at: <%= Time.now - 10.hours %>
-  updated_at: <%= Time.now - 10.hours %>
-  timestamp: <%= Time.now - 10.hours %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  timestamp: <%= Time.now %>
 
 fifth:
   id: 5
   user_id: 1
   team_id: 1
   channel_id: 2
-  slack_id: <%= (Time.now - 10.hours).to_f %>
+  slack_id: <%= (Time.now).to_f %>
   score: 0.142804285386363
-  created_at: <%= Time.now - 10.hours %>
-  updated_at: <%= Time.now - 10.hours %>
-  timestamp: <%= Time.now - 10.hours %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  timestamp: <%= Time.now %>
 
 sixth:
   id: 6

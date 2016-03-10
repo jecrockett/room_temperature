@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-03-09T20:19:51-07:00">2016-03-09T20:19:51-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-03-10T08:53:24-07:00">2016-03-10T08:53:24-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -1578,7 +1578,7 @@
         <li class="covered" data-hits="9" data-linenumber="12">
           <span class="hits">9</span>
           
-          <code class="ruby">    user_id.blank? ? complete_channel_data : partial_channel_data</code>
+          <code class="ruby">    user_id.empty? ? complete_channel_data : partial_channel_data</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
@@ -1638,7 +1638,7 @@
         <li class="covered" data-hits="3" data-linenumber="22">
           <span class="hits">3</span>
           
-          <code class="ruby">    Rails.cache.fetch(&quot;partial_channel#{channel_id}-user#{user_id}-#{Sentiment.where(channel_id: channel_id).last.slack_id}&quot;) do</code>
+          <code class="ruby">    Rails.cache.fetch(&quot;partial_channel#{channel_id}-user#{user_id}-#{range}-#{Sentiment.where(channel_id: channel_id).last.slack_id}&quot;) do</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="23">
