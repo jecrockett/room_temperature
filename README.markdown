@@ -6,7 +6,7 @@ Room Temperature allows users to monitor general sentiment in their Slack team's
 
 ### Demo
 
-![]
+![](http://g.recordit.co/pSyxDnY5U6.gif)
 
 ### Technical Overview
 
