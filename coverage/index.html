@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-03-10T10:00:21-07:00">2016-03-10T10:00:21-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-03-10T10:02:04-07:00">2016-03-10T10:02:04-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         13.5
+         18.67
        </span>
     </span> hits/line)
   </h2>
@@ -57,7 +57,7 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>33.0</td>
+        <td>55.7</td>
       </tr>
       
       <tr>
@@ -67,7 +67,7 @@
         <td>41</td>
         <td>41</td>
         <td>0</td>
-        <td>31.6</td>
+        <td>46.5</td>
       </tr>
       
       <tr>
@@ -117,7 +117,7 @@
         <td>11</td>
         <td>11</td>
         <td>0</td>
-        <td>44.4</td>
+        <td>62.9</td>
       </tr>
       
       <tr>
@@ -167,7 +167,7 @@
         <td>21</td>
         <td>21</td>
         <td>0</td>
-        <td>2.0</td>
+        <td>2.4</td>
       </tr>
       
     </tbody>
@@ -183,7 +183,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         23.14
+         34.46
        </span>
     </span> hits/line)
   </h2>
@@ -215,7 +215,7 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>33.0</td>
+        <td>55.7</td>
       </tr>
       
       <tr>
@@ -225,7 +225,7 @@
         <td>41</td>
         <td>41</td>
         <td>0</td>
-        <td>31.6</td>
+        <td>46.5</td>
       </tr>
       
       <tr>
@@ -270,7 +270,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         9.32
+         11.26
        </span>
     </span> hits/line)
   </h2>
@@ -302,7 +302,7 @@
         <td>11</td>
         <td>11</td>
         <td>0</td>
-        <td>44.4</td>
+        <td>62.9</td>
       </tr>
       
       <tr>
@@ -515,7 +515,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.0
+         2.4
        </span>
     </span> hits/line)
   </h2>
@@ -547,7 +547,7 @@
         <td>21</td>
         <td>21</td>
         <td>0</td>
-        <td>2.0</td>
+        <td>2.4</td>
       </tr>
       
     </tbody>
@@ -621,8 +621,8 @@
           <code class="ruby">  def current_user</code>
         </li>
       
-        <li class="covered" data-hits="268" data-linenumber="8">
-          <span class="hits">268</span>
+        <li class="covered" data-hits="472" data-linenumber="8">
+          <span class="hits">472</span>
           
           <code class="ruby">    @current_user ||= User.find(session[:user_id]) if session[:user_id]</code>
         </li>
@@ -921,20 +921,20 @@
           <code class="ruby">      Rails.cache.fetch(&quot;#{Time.now.strftime(&quot;%b %e, %l:%M&quot;)}&quot;) do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="41">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="41">
+          <span class="hits">3</span>
           
           <code class="ruby">        slack = SlackService.new</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="42">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="42">
+          <span class="hits">3</span>
           
           <code class="ruby">        team_channels = slack.fetch_team_channels(current_user)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="43">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="43">
+          <span class="hits">3</span>
           
           <code class="ruby">        parse_untracked(team_channels).compact</code>
         </li>
@@ -963,20 +963,20 @@
           <code class="ruby">    def parse_untracked(channels)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="48">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="48">
+          <span class="hits">3</span>
           
           <code class="ruby">      channels.map do |channel|</code>
         </li>
       
-        <li class="covered" data-hits="406" data-linenumber="49">
-          <span class="hits">406</span>
+        <li class="covered" data-hits="609" data-linenumber="49">
+          <span class="hits">609</span>
           
           <code class="ruby">        next if already_tracking?(channel)</code>
         </li>
       
-        <li class="covered" data-hits="403" data-linenumber="50">
-          <span class="hits">403</span>
+        <li class="covered" data-hits="606" data-linenumber="50">
+          <span class="hits">606</span>
           
           <code class="ruby">        [channel[&#39;name&#39;], [channel[&#39;name&#39;], channel[&#39;id&#39;]]]</code>
         </li>
@@ -1005,8 +1005,8 @@
           <code class="ruby">    def already_tracking?(ch)</code>
         </li>
       
-        <li class="covered" data-hits="406" data-linenumber="55">
-          <span class="hits">406</span>
+        <li class="covered" data-hits="609" data-linenumber="55">
+          <span class="hits">609</span>
           
           <code class="ruby">      current_user.team.channels.pluck(:slack_id).include?(ch[&#39;id&#39;])</code>
         </li>
@@ -1437,8 +1437,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="476" data-linenumber="10">
-          <span class="hits">476</span>
+        <li class="covered" data-hits="680" data-linenumber="10">
+          <span class="hits">680</span>
           
           <code class="ruby">  default_scope { order(:name) }</code>
         </li>
@@ -2559,20 +2559,20 @@
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="5">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="5">
+          <span class="hits">5</span>
           
           <code class="ruby">    @conn = Faraday.new(:url =&gt; &#39;https://slack.com&#39;) do |faraday|</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="6">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="6">
+          <span class="hits">5</span>
           
           <code class="ruby">      faraday.request  :url_encoded</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="7">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="7">
+          <span class="hits">5</span>
           
           <code class="ruby">      faraday.adapter  Faraday.default_adapter</code>
         </li>
@@ -2667,26 +2667,26 @@
           <code class="ruby">  def fetch_team_channels(user)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="23">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="23">
+          <span class="hits">4</span>
           
           <code class="ruby">    response = conn.get do |req|</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="24">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="24">
+          <span class="hits">4</span>
           
           <code class="ruby">      req.url &#39;/api/channels.list&#39;</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="25">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="25">
+          <span class="hits">4</span>
           
           <code class="ruby">      req.params[&#39;token&#39;] = user.token</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="26">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="26">
+          <span class="hits">4</span>
           
           <code class="ruby">      req.params[&#39;exclude_archived&#39;] = 1</code>
         </li>
@@ -2697,14 +2697,14 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="28">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="28">
+          <span class="hits">4</span>
           
           <code class="ruby">    parsed_response = JSON.parse(response.body)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="29">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="29">
+          <span class="hits">4</span>
           
           <code class="ruby">    parsed_response[&#39;channels&#39;]</code>
         </li>
