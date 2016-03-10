@@ -5,9 +5,11 @@ RSpec.feature "User can add a new channel", type: :feature do
     visit root_path
     click_on "Login with Slack"
 
-    visit new_channel_path
-    select '1406', from: 'channel-select'
-    click_on "T R A C K"
+    VCR.use_cassette 'add_new_channel' do
+      visit new_channel_path
+      select '1406', from: 'channel-select'
+      click_on "T R A C K"
+    end
 
     expect(current_path).to eq channels_path
     within '.flash-container' do
@@ -20,8 +22,10 @@ RSpec.feature "User can add a new channel", type: :feature do
     visit root_path
     click_on "Login with Slack"
 
-    visit new_channel_path
-    click_on "T R A C K"
+    VCR.use_cassette 'add_new_channel' do
+      visit new_channel_path
+      click_on "T R A C K"
+    end
 
     within '.flash-container' do
       expect(page).to have_content("Something went wrong. Try your selection again.")
