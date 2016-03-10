@@ -33,7 +33,7 @@ class ChannelsController < ApplicationController
   private
 
     def parse_channel_params
-      params[:info].split.map { |info| info.gsub(/\W+/, '') }
+      params["channel-select"].split.map { |info| info.gsub(/\W+/, '') }
     end
 
     def untracked_channels

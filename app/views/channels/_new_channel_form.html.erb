@@ -2,7 +2,7 @@
   <%= form_tag(channels_path) do %>
     <div class="field">
       <div class="input-field">
-        <%= select_tag(:info, options_for_select(@untracked_channels), include_blank: true) %>
+        <%= select_tag(:info, options_for_select(@untracked_channels), include_blank: true, name: "channel-select") %>
         <%= label_tag 'channel', 'Select a Channel (required):' %>
       </div>
     </div>

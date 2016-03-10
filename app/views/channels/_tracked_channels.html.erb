@@ -1,9 +1,9 @@
 <div class="tracked-channels">
   <h4>Tracked Channels</h4>
-  <% @tracked_channels.each do |channel| %>
+  <% @tracked_channels.each_with_index do |channel, index| %>
     <div>
       <span><%= channel.name %></span>
-      <%= link_to "Delete", channel_path(channel.id), method: :delete %>
+      <%= link_to "Delete", channel_path(channel.id), method: :delete, id: "delete-link-#{index}" %>
     </div>
   <% end %>
 </div>
