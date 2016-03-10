@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   belongs_to :team
   has_many :sentiments
 
+  default_scope { order(:nickname) }
+
   def self.find_or_create_from_auth(auth)
     user = User.find_or_create_by(u_id: auth['uid'])
 

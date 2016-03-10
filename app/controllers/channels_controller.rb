@@ -37,9 +37,11 @@ class ChannelsController < ApplicationController
     end
 
     def untracked_channels
-      slack = SlackService.new
-      team_channels = slack.fetch_team_channels(current_user)
-      parse_untracked(team_channels).compact
+      Rails.cache.fetch("#{Time.now.strftime("%b %e, %l:%M")}") do
+        slack = SlackService.new
+        team_channels = slack.fetch_team_channels(current_user)
+        parse_untracked(team_channels).compact
+      end
     end
 
     def parse_untracked(channels)

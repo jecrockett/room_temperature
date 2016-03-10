@@ -8,26 +8,26 @@ class GraphManager
   end
 
   def channel_data
-    return nil if channel_id.blank? || Channel.find(channel_id).sentiments.blank?
+    return nil if channel_id.blank? || channel_has_no_sentiments
     user_id.blank? ? complete_channel_data : partial_channel_data
   end
 
   def complete_channel_data
-    Rails.cache.fetch("#{range}-channel_#{channel_id}-complete-#{Sentiment.where(channel_id: channel_id).last.slack_id}") do
-      scoped_sentiments.where(channel_id: channel_id).pluck(:slack_id, :score)
+    Rails.cache.fetch("complete_channel#{channel_id}-#{range}-#{Sentiment.where(channel_id: channel_id).last.slack_id}") do
+      channel_data_from_all_users
     end
   end
 
   def partial_channel_data
-    Rails.cache.fetch("#{range}-channel_#{channel_id}-user_#{user_id}-partial-#{Sentiment.where(channel_id: channel_id).last.slack_id}") do
-      scoped_sentiments.where(channel_id: channel_id).where.not(user_id: user_id).pluck(:slack_id, :score)
+    Rails.cache.fetch("partial_channel#{channel_id}-user#{user_id}-#{Sentiment.where(channel_id: channel_id).last.slack_id}") do
+      channel_data_with_user_filtered_out
     end
   end
 
   def user_data
     return nil if channel_id.blank? || user_id.blank?
-    Rails.cache.fetch("#{range}-user_#{user_id}-channel_#{channel_id}-#{Sentiment.where(channel_id: channel_id).last.slack_id}") do
-      scoped_sentiments.where(channel_id: channel_id, user_id: user_id).pluck(:slack_id, :score)
+    Rails.cache.fetch("complete_user#{user_id}-channel#{channel_id}-#{Sentiment.where(channel_id: channel_id).last.slack_id}") do
+      user_data_for_channel
     end
   end
 
@@ -86,5 +86,21 @@ class GraphManager
   def convert_to_dates(min, max)
     [Time.at(min).to_s[5..-7],
      Time.at(max).to_s[5..-7]]
+  end
+
+  def channel_data_from_all_users
+    scoped_sentiments.where(channel_id: channel_id).pluck(:slack_id, :score)
+  end
+
+  def channel_data_with_user_filtered_out
+    scoped_sentiments.where(channel_id: channel_id).where.not(user_id: user_id).pluck(:slack_id, :score)
+  end
+
+  def user_data_for_channel
+    scoped_sentiments.where(channel_id: channel_id, user_id: user_id).pluck(:slack_id, :score)
+  end
+
+  def channel_has_no_sentiments
+    Channel.find(channel_id).sentiments.blank?
   end
 end

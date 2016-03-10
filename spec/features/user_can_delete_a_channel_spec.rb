@@ -4,12 +4,8 @@ RSpec.feature "User deletes a channel", type: :feature do
   scenario "User clicks on delete for a channel being tracked" do
     visit root_path
     click_on "Login with Slack"
-
     visit channels_path
-
-    visit new_channel_path
-    select '1406', from: 'channel-select'
-    click_on "T R A C K"
+    add_1406_channel
 
     within ".tracked-channels" do
       expect(page).to have_content "1406"
