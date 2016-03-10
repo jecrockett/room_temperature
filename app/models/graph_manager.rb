@@ -9,7 +9,7 @@ class GraphManager
 
   def channel_data
     return nil if channel_id.blank? || channel_has_no_sentiments
-    user_id.blank? ? complete_channel_data : partial_channel_data
+    user_id.empty? ? complete_channel_data : partial_channel_data
   end
 
   def complete_channel_data
@@ -19,7 +19,7 @@ class GraphManager
   end
 
   def partial_channel_data
-    Rails.cache.fetch("partial_channel#{channel_id}-user#{user_id}-#{Sentiment.where(channel_id: channel_id).last.slack_id}") do
+    Rails.cache.fetch("partial_channel#{channel_id}-user#{user_id}-#{range}-#{Sentiment.where(channel_id: channel_id).last.slack_id}") do
       channel_data_with_user_filtered_out
     end
   end
