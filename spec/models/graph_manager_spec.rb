@@ -7,74 +7,71 @@ RSpec.describe GraphManager, type: :model do
     Rails.cache.clear
   end
 
-  context "No channel is passed in" do
-    it "Sets channel data to nil" do
-      gm = GraphManager.new("", "", "week")
-      data = gm.channel_data
+  describe "#channel_data" do
+    context "No channel is passed in" do
+      it "Sets channel data to nil" do
+        gm = GraphManager.new("", "", "week")
+        data = gm.channel_data
 
-      expect(data).to eq nil
+        expect(data).to eq nil
+      end
+    end
+
+    context "A channel and range is passed in, but no user" do
+      it "Returns today's channel data" do
+        gm = GraphManager.new("1", "", "0")
+        data = gm.channel_data
+
+        expect(data.count).to eq 1
+      end
+
+      it "Returns yesterday's's channel data" do
+        gm = GraphManager.new("1", "", "1")
+        data = gm.channel_data
+
+        expect(data.count).to eq 1
+      end
+
+      it "Returns channel data from 3-days-ago" do
+        gm = GraphManager.new("1", "", "3")
+        data = gm.channel_data
+
+        expect(data.count).to eq 1
+      end
+
+      it "Returns channel data from 4-days-ago" do
+        gm = GraphManager.new("1", "", "4")
+        data = gm.channel_data
+
+        expect(data.count).to eq 1
+      end
+
+      it "Returns weekly channel 1 data" do
+        gm = GraphManager.new("1", "", "week")
+        data = gm.channel_data
+
+        expect(data.count).to eq 4
+      end
+
+      it "Returns weekly channel 2 data" do
+        gm = GraphManager.new("2", "", "week")
+        data = gm.channel_data
+
+        expect(data.count).to eq 2
+      end
+    end
+
+    context "A user is specified in addition to a channel and range" do
+      it "returns partial channel 2 data without the user's data" do
+        gm = GraphManager.new("2", "1", "week")
+        data = gm.channel_data
+
+        expect(data.count).to eq 1
+      end
     end
   end
 
-  it "Returns today's channel data when requested" do
-    gm = GraphManager.new("1", "", "0")
-    data = gm.channel_data
-    binding.pry
-    expect(data.count).to eq 1
-  end
-
-  it "Returns yesterday's's channel data when requested" do
-    gm = GraphManager.new("1", "", "1")
-    data = gm.channel_data
-    binding.pry
-
-    expect(data.count).to eq 1
-  end
-
-  context "User requets data from 3-days-ago" do
-    it "Returns channel data from 3-days-ago" do
-      gm = GraphManager.new("1", "", "3")
-      data = gm.channel_data
-
-      expect(data.count).to eq 1
-    end
-  end
-
-  context "User requests data from 4-days-ago" do
-    it "Returns channel data from 4-days-ago" do
-      gm = GraphManager.new("1", "", "4")
-      data = gm.channel_data
-
-      expect(data.count).to eq 1
-    end
-  end
-
-  context "User requests weekly data from channel 1" do
-    it "Returns weekly channel 1 data" do
-      gm = GraphManager.new("1", "", "week")
-      data = gm.channel_data
-
-      expect(data.count).to eq 4
-    end
-  end
-
-  context "User requests weekly data from channel 2" do
-    it "Returns weekly channel 2 data" do
-      gm = GraphManager.new("2", "", "week")
-      data = gm.channel_data
-
-      expect(data.count).to eq 2
-    end
-  end
-
-  context "User requests weekly channel 2 data and specifies a user" do
-    it "returns partial channel 2 data without the user's data" do
-      gm = GraphManager.new("2", "1", "week")
-      data = gm.channel_data
-
-      expect(data.count).to eq 1
-    end
-
+  describe "#user_data" do
     it "returns the specified user's data separately" do
       gm = GraphManager.new("2", "1", "week")
       data = gm.user_data
@@ -83,7 +80,7 @@ RSpec.describe GraphManager, type: :model do
     end
   end
 
-  context "#complete_channel_data requested" do
+  describe "#complete_channel_data" do
     it "returns entire dataset for specified channel" do
       gm = GraphManager.new("1", "", "week")
       data = gm.complete_channel_data
@@ -92,19 +89,12 @@ RSpec.describe GraphManager, type: :model do
     end
   end
 
-  context "User specifies a user to filter out of channel data" do
+  describe "#partial_channel_data" do
     it "returns entire dataset for that channel minus the user's data" do
       gm = GraphManager.new("1", "2", "week")
       data = gm.partial_channel_data
 
       expect(data.count).to eq 2
-    end
-
-    it "returns user data separately" do
-      gm = GraphManager.new("2", "2", "week")
-      data = gm.user_data
-
-      expect(data.count).to eq 1
     end
   end
 
@@ -136,58 +126,53 @@ RSpec.describe GraphManager, type: :model do
 
       expect(range).to eq "2 Days Ago"
 
-      gm = GraphManager.new("1", "", "4") do
+      gm = GraphManager.new("1", "", "4")
       range = gm.chart_range
 
       expect(range).to eq "4 Days Ago"
-      end
     end
   end
 
   describe "#chart_title" do
-    it "instructs user to select a channel if none is selected" do
-      gm = GraphManager.new("", "", "week")
-      title = gm.chart_title
+    context "No channel is selected" do
+      it "instructs user to select a channel" do
+        gm = GraphManager.new("", "", "week")
+        title = gm.chart_title
 
-      expect(title).to eq "Please select a channel from the dropdown menu."
+        expect(title).to eq "Please select a channel from the dropdown menu."
+      end
     end
 
-    it "sets title with no user specified" do
-      gm = GraphManager.new("1", "", "week")
-      title = gm.chart_title
+    context "Channel is specified, but no user" do
+      it "sets title for 'week' request" do
+        gm = GraphManager.new("1", "", "week")
+        title = gm.chart_title
 
-      expect(title).to eq "Sentiments This Week in turing"
+        expect(title).to eq "Sentiments This Week in turing"
+      end
 
+      it "set title for 'today' request" do
+        gm = GraphManager.new("1", "", "0")
+        title = gm.chart_title
 
-      gm = GraphManager.new("1", "", "0")
-      title = gm.chart_title
+        expect(title).to eq "Sentiments Today in turing"
+      end
 
-      expect(title).to eq "Sentiments Today in turing"
+      it "sets title for '3-days-ago' request" do
+        gm = GraphManager.new("1", "", "3")
+        title = gm.chart_title
 
-
-      gm = GraphManager.new("1", "", "3")
-      title = gm.chart_title
-
-      expect(title).to eq "Sentiments 3 Days Ago in turing"
+        expect(title).to eq "Sentiments 3 Days Ago in turing"
+      end
     end
 
-    it "sets title with user specified" do
-      gm = GraphManager.new("1", "2", "week")
-      title = gm.chart_title
+    context "a channel, range, and user are all specified" do
+      it "mentions the specified user in the title" do
+        gm = GraphManager.new("1", "2", "week")
+        title = gm.chart_title
 
-      expect(title).to eq "Sentiments This Week in turing -- Highlighting: tmoore"
-
-
-      gm = GraphManager.new("1", "2", "1")
-      title = gm.chart_title
-
-      expect(title).to eq "Sentiments Yesterday in turing -- Highlighting: tmoore"
-
-
-      gm = GraphManager.new("1", "2", "4")
-      title = gm.chart_title
-
-      expect(title).to eq "Sentiments 4 Days Ago in turing -- Highlighting: tmoore"
+        expect(title).to eq "Sentiments This Week in turing -- Highlighting: tmoore"
+      end
     end
   end
 
@@ -217,22 +202,5 @@ RSpec.describe GraphManager, type: :model do
       expect(earliest).to eq (Time.now - 4.days).strftime('%m-%d')
       expect(latest).to eq (Time.now).strftime('%m-%d')
     end
-
   end
-
-  context "User requests weekly channel data and does not specify a user" do
-    it "sets the chart title to weekly for the channel" do
-      gm = GraphManager.new("1", "", "week")
-      title = gm.chart_title
-
-      expect(title).to eq "Sentiments This Week in turing"
-    end
-  end
-
-
-
-
-
-
-
 end
