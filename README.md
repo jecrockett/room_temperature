@@ -1,4 +1,6 @@
-== Room Temperature: A Slack Channel Sentiment Analysis Tool
+Room Temperature: A Slack Channel Sentiment Analysis Tool
+=====================
+
 
 [See On Heroku](http://room-temperature.herokuapp.com/dashboard)
 
